@@ -1,5 +1,1 @@
-#include <iostream.h>
-
-void main()
-{
-}
+#include <iostream>
