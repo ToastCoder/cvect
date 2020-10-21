@@ -30,7 +30,7 @@ int main()
     return 0;
 }
 ```
-4. Use any function with the object using dot operator
+4. Use any function with the object using . (dot) operator
 
 ```cpp
 
