@@ -12,7 +12,7 @@ View the python version [here](https://github.com/ToastCoder/vectoralg/)
 
 ### Usage:
 
-1. Download the vectoralg.h Header file and keep it in the same directory of your code.
+1. Download the vectoralg.h header file and keep it in the same directory of your code.
 
 2. Import vectoralg to your C++ program
 
