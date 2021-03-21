@@ -1,9 +1,12 @@
+// HEADER FILE DEFINITION
 #ifndef PYVECT_H
 #define PYVECT_H
 
+// REQUIRED LIBRARY FILES
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y)
 {
@@ -29,6 +32,13 @@ int *cross(int *x, int *y)
 double modVector(int *x)
 {
     double mod = sqrt((x[0]^2)+(x[1]^2)+(x[2]^2));
+}
+
+// FUNCTION TO FIND ANGLE BETWEEN TWO VECTORS
+double angle(int *x,int *y)
+{
+    double ang = acos((dot(x,y))/(modVector(x)*modVector(y)));
+    return ang;
 }
 
 #endif
