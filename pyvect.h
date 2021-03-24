@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdbool.h>
 
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y)
@@ -32,6 +33,7 @@ int *cross(int *x, int *y)
 double modVector(int *x)
 {
     double mod = sqrt((x[0]^2)+(x[1]^2)+(x[2]^2));
+    return mod;
 }
 
 // FUNCTION TO FIND ANGLE BETWEEN TWO VECTORS
@@ -41,5 +43,25 @@ double angle(int *x,int *y)
     return ang;
 }
 
-#endif
+// FUNCTION TO FIND THE PROJECTION OF ONE VECTOR OVER ANOTHER
+double projection(int *x, int *y)
+{
+    double mod = modVector(y);
+    double proj = dot(x,y)/mod;
+    return proj;
+}
 
+// FUNCTION TO FIND IF TWO VECTORS ARE PREPENDICULAR
+bool isPerpendicular(int *x, int *y)
+{
+    if (dot(x,y) == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+#endif
