@@ -8,6 +8,9 @@
 #include <math.h>
 #include <stdbool.h>
 
+// REQUIRED SUBHEADERS
+#include "lib/area/area.h"
+
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y)
 {
@@ -63,5 +66,6 @@ bool isPerpendicular(int *x, int *y)
         return false;
     }
 }
+
 
 #endif
