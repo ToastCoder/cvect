@@ -1,3 +1,17 @@
+/////////////////////////////////////////////////////
+
+// PYVECT-C HEADER FILE
+
+// FILE NAME: PYVECT.H
+
+// DEVELOPED BY: VIGNESHWAR RAVICHANDAR
+
+// LICENSE: MIT LICENSE
+
+/////////////////////////////////////////////////////
+
+// MAIN HEADER FILE FOR THE LIBRARY PYVECT
+
 // HEADER FILE DEFINITION
 #ifndef PYVECT_H
 #define PYVECT_H
@@ -70,7 +84,7 @@ bool isPerpendicular(int *x, int *y)
 // FUNCTION TO FIND IF TWO VECTORS ARE COLLINEAR
 bool isCollinear(int *x,int *y)
 {
-    int res = cross(x,y);
+    int *res = cross(x,y);
     if ((res[0]==0)||(res[1]==0)||(res[2]==0))
         {
             return true;
