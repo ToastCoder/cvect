@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////
 
-// PYVECT-C HEADER FILE
+// PYVECT-C
 
 // FILE NAME: PYVECT.H
 
@@ -23,7 +23,7 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-#include "lib/area/area.h"
+#include "area.h"
 
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y)
