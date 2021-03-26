@@ -67,5 +67,18 @@ bool isPerpendicular(int *x, int *y)
     }
 }
 
+// FUNCTION TO FIND IF TWO VECTORS ARE COLLINEAR
+bool isCollinear(int *x,int *y)
+{
+    int res = cross(x,y);
+    if ((res[0]==0)||(res[1]==0)||(res[2]==0))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+}
 
 #endif
