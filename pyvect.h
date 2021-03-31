@@ -201,4 +201,10 @@ double maxValue(int *x, int *y)
     return modVector(x)*modVector(y);
 }
 
+// FUNCTION TO FIND THE MINIMUM VALUE OF ANY TWO VECTORS
+double minValue(int *x, int *y)
+{
+    return -1.0*(modVector(x)*modVector(y));
+}
+
 #endif
