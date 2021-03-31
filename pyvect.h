@@ -142,4 +142,15 @@ double *bisector(int *x, int *y)
     return bsect;
 }
 
+// FUNCTION TO FIND THE POSITION VECTOR
+double *positionVector(int *x, int *y)
+{
+    double *pos;
+    for(int i=0;i<3;i++)
+    {
+        pos[i] = 0.5*(x[i]+y[i]);
+    }
+    return pos;
+}
+
 #endif
