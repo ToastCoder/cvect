@@ -38,12 +38,8 @@ double triangle_pos(int *arr1, int *arr2, int *arr3)
     int *c2 = cross(arr2,arr3);
     int *c3 = cross(arr3,arr1);
     int *c;
-        
     for (int i = 0;i<3;i++)
-    {
         c[i] = c1[i]+c2[i]+c3[i];
-    }
-
     return abs(0.5*modVector(c));
 }
 
