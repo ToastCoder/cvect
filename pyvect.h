@@ -153,4 +153,18 @@ double *positionVector(int *x, int *y)
     return pos;
 }
 
+// FUNCTION TO FIND IF TWO VECTORS ARE COPLANAR
+bool isCoplanar(int *x, int *y, int *z)
+{
+    int cop = dot(cross(x,y),z);
+    if (cop == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 #endif
