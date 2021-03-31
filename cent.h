@@ -25,4 +25,20 @@
 // REQUIRED SUBHEADERS
 #include "pyvect.h"
 
+double *triangle(int *arr1, int *arr2, int *arr3)
+{
+    double *res;
+    for(int i=0;i<3;i++)
+        res[i] = 0.25*(arr1[i]+arr2[i]+arr3[i]);
+    return res;
+}
+
+double *tetrahedron(int *arr1, int *arr2, int *arr3, int *arr4)
+{
+    double *res;
+    for(int i=0;i<3;i++)
+        res[i] = 0.25*(arr1[i]+arr2[i]+arr3[i]+arr4[i]);
+    return res;
+}
+
 #endif
