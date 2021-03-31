@@ -128,4 +128,18 @@ Struct unitNormal(int *x, int *y)
     }
     return un;
 }
+
+// FUNCTION TO FIND BISECTOR OF TWO VECTORS
+double *bisector(int *x, int *y)
+{
+    double *bsect;
+    double *unit_a = unitVector(x);
+    double *unit_b = unitVector(y);
+    for (int i=0;i<3;i++)
+    {
+        bsect[i] = unit_a[i]+unit_b[i];
+    }
+    return bsect;
+}
+
 #endif
