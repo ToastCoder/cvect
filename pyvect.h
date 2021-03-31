@@ -96,15 +96,37 @@ bool isCollinear(int *x,int *y)
 }
 
 // FUNCTION TO FIND UNIT VECTOR
-double *unitvector(int *arr)
+double *unitVector(int *arr)
 {
-    double *unit = {0,0,0};
+    double *unit;
     double mod = modVector(arr);
     for(int i=0;i<3;i++)
     {
         unit[i] = unit[i]/mod;
     }
     return unit;
+}
+
+// STRUCT FOR RETURNING MULTIPLE VALUES IN UNITNORMAL()
+struct unormal
+{
+    double *u_norm;
+    double *u_norm_inv;
+};
+
+typedef struct unormal Struct;
+
+// FUNCTION TO FIND UNIT NORMAL
+Struct unitNormal(int *x, int *y)
+{
+    Struct un;
+    int *cross_prod = cross(x,y);
+    un.u_norm = unitVector(cross_prod);
+    for (int i=0;i<3;i++)
+    {
+        un.u_norm_inv[i] = un.u_norm[i]*-1;
+    }
+    return un;
 }
 
 #endif
