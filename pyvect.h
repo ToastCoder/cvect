@@ -195,4 +195,10 @@ recip reciprocal(int *x, int *y, int *z)
     return r;
 }
 
+// FUNCTION TO FIND THE MAXIMUM VALUE OF ANY TWO VECTORS
+double maxValue(int *x, int *y)
+{
+    return modVector(x)*modVector(y);
+}
+
 #endif
