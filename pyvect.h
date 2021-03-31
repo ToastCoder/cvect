@@ -24,11 +24,30 @@
 
 // REQUIRED SUBHEADERS
 #include "area.h"
+#include "cent.h"
+
+// STRUCT FOR RETURNING MULTIPLE VALUES IN UNITNORMAL()
+struct unormal
+{
+    double *u_norm;
+    double *u_norm_inv;
+};
+
+// STRUCT FOR RECIPROCAL() FUNCTION
+struct reci
+{
+    double *rec1;
+    double *rec2;
+    double *rec3;
+};
+
+typedef struct unormal u_norm;
+typedef struct reci recip;
 
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y)
 {
-    int dot_product = 0;
+    int dot_product;
     for(int i = 0; i<3; i++)
     {
         dot_product = dot_product + (x[i]*y[i]);
@@ -49,23 +68,19 @@ int *cross(int *x, int *y)
 // FUNCTION TO CALCULATE THE MODULUS OF A VECTOR
 double modVector(int *x)
 {
-    double mod = sqrt((x[0]^2)+(x[1]^2)+(x[2]^2));
-    return mod;
+    return sqrt((x[0]^2)+(x[1]^2)+(x[2]^2));;
 }
 
 // FUNCTION TO FIND ANGLE BETWEEN TWO VECTORS
 double angle(int *x,int *y)
 {
-    double ang = acos((dot(x,y))/(modVector(x)*modVector(y)));
-    return ang;
+    return acos((dot(x,y))/(modVector(x)*modVector(y)));;
 }
 
 // FUNCTION TO FIND THE PROJECTION OF ONE VECTOR OVER ANOTHER
 double projection(int *x, int *y)
 {
-    double mod = modVector(y);
-    double proj = dot(x,y)/mod;
-    return proj;
+    return dot(x,y)/modVector(y);
 }
 
 // FUNCTION TO FIND IF TWO VECTORS ARE PREPENDICULAR
@@ -99,29 +114,18 @@ bool isCollinear(int *x,int *y)
 double *unitVector(int *arr)
 {
     double *unit;
-    double mod = modVector(arr);
     for(int i=0;i<3;i++)
     {
-        unit[i] = unit[i]/mod;
+        unit[i] = unit[i]/modVector(arr);
     }
     return unit;
 }
-
-// STRUCT FOR RETURNING MULTIPLE VALUES IN UNITNORMAL()
-struct unormal
-{
-    double *u_norm;
-    double *u_norm_inv;
-};
-
-typedef struct unormal u_norm;
 
 // FUNCTION TO FIND UNIT NORMAL
 u_norm unitNormal(int *x, int *y)
 {
     u_norm un;
-    int *cross_prod = cross(x,y);
-    un.u_norm = unitVector(cross_prod);
+    un.u_norm = unitVector(cross(x,y));
     for (int i=0;i<3;i++)
     {
         un.u_norm_inv[i] = un.u_norm[i]*-1;
@@ -156,8 +160,7 @@ double *positionVector(int *x, int *y)
 // FUNCTION TO FIND IF TWO VECTORS ARE COPLANAR
 bool isCoplanar(int *x, int *y, int *z)
 {
-    int cop = dot(cross(x,y),z);
-    if (cop == 0)
+    if (dot(cross(x,y),z) == 0)
     {
         return true;
     }
@@ -167,16 +170,6 @@ bool isCoplanar(int *x, int *y, int *z)
     }
 }
 
-// STRUCT FOR RECIPROCAL() FUNCTION
-struct reci
-{
-    double *rec1;
-    double *rec2;
-    double *rec3;
-};
-
-typedef struct reci recip;
-
 // FUNCTION TO FIND THE RECIPROCAL OF THREE VECTORS
 recip reciprocal(int *x, int *y, int *z)
 {
@@ -184,13 +177,12 @@ recip reciprocal(int *x, int *y, int *z)
     int *c1 = cross(y,z);
     int *c2 = cross(z,x);
     int *c3 = cross(x,y);
-    int d = dot(cross(x,y),z);
 
     for (int i=0;i<3;i++)
     {
-        r.rec1[i] = c1[i]/d;
-        r.rec2[i] = c2[i]/d;
-        r.rec3[i] = c3[i]/d;
+        r.rec1[i] = c1[i]/dot(cross(x,y),z);
+        r.rec2[i] = c2[i]/dot(cross(x,y),z);
+        r.rec3[i] = c3[i]/dot(cross(x,y),z);
     }
     return r;
 }
