@@ -95,4 +95,16 @@ bool isCollinear(int *x,int *y)
         }
 }
 
+// FUNCTION TO FIND UNIT VECTOR
+double *unitvector(int *arr)
+{
+    double *unit = {0,0,0};
+    double mod = modVector(arr);
+    for(int i=0;i<3;i++)
+    {
+        unit[i] = unit[i]/mod;
+    }
+    return unit;
+}
+
 #endif
