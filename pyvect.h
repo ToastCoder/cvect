@@ -114,12 +114,12 @@ struct unormal
     double *u_norm_inv;
 };
 
-typedef struct unormal Struct;
+typedef struct unormal u_norm;
 
 // FUNCTION TO FIND UNIT NORMAL
-Struct unitNormal(int *x, int *y)
+u_norm unitNormal(int *x, int *y)
 {
-    Struct un;
+    u_norm un;
     int *cross_prod = cross(x,y);
     un.u_norm = unitVector(cross_prod);
     for (int i=0;i<3;i++)
@@ -165,6 +165,34 @@ bool isCoplanar(int *x, int *y, int *z)
     {
         return false;
     }
+}
+
+// STRUCT FOR RECIPROCAL() FUNCTION
+struct reci
+{
+    double *rec1;
+    double *rec2;
+    double *rec3;
+};
+
+typedef struct reci recip;
+
+// FUNCTION TO FIND THE RECIPROCAL OF THREE VECTORS
+recip reciprocal(int *x, int *y, int *z)
+{
+    recip r;
+    int *c1 = cross(y,z);
+    int *c2 = cross(z,x);
+    int *c3 = cross(x,y);
+    int d = dot(cross(x,y),z);
+
+    for (int i=0;i<3;i++)
+    {
+        r.rec1[i] = c1[i]/d;
+        r.rec2[i] = c2[i]/d;
+        r.rec3[i] = c3[i]/d;
+    }
+    return r;
 }
 
 #endif
