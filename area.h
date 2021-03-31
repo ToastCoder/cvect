@@ -25,7 +25,7 @@
 // REQUIRED SUBHEADERS
 #include "pyvect.h"
 
-// FUNCTION TO FIND AREA OF TRIANGLE WHEN ADJACENT SIDES ARE GIVEN
+// FUNCTION TO FIND AREA OF TRIANGLE WHERE ADJACENT SIDES ARE GIVEN
 double triangle_adj(int *arr1, int *arr2) 
     {
         int *c = cross(arr1, arr2);
@@ -34,7 +34,7 @@ double triangle_adj(int *arr1, int *arr2)
         return res;
     }
 
-// FUNCTION TO FIND AREA OF TRIANGLE WHEN POSITION VECTORS ARE GIVEN
+// FUNCTION TO FIND AREA OF TRIANGLE WHERE POSITION VECTORS ARE GIVEN
 double triangle_pos(int *arr1, int *arr2, int *arr3)
     {
         int *c1 = cross(arr1,arr2);
@@ -48,6 +48,12 @@ double triangle_pos(int *arr1, int *arr2, int *arr3)
         }
 
         return abs(0.5*modVector(c));
+    }
+
+// FUNCTION TO FIND THE AREA OF A QUADRILATERAL WHERE THE DIAGONALS ARE GIVEN
+double quad(int *d1, int *d2)
+    {
+        return abs(sqrt(modVector(cross(d1, d2))));
     }
 
 #endif
