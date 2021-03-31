@@ -128,5 +128,4 @@ Struct unitNormal(int *x, int *y)
     }
     return un;
 }
-
 #endif
