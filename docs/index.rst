@@ -1,2 +1,2 @@
-vectoralg-cpp
+pyvect-c
 ===============
