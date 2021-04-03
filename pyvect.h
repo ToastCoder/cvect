@@ -23,8 +23,8 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-#include "area.h"
-#include "cent.h"
+#include "area/area.h"
+#include "cent/cent.h"
 
 // STRUCT FOR RETURNING MULTIPLE VALUES IN UNITNORMAL()
 struct unormal
