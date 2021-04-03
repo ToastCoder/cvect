@@ -23,7 +23,7 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-#include "pyvect.h"
+#include "../pyvect.h"
 
 // FUNCTION TO FIND AREA OF TRIANGLE WHERE ADJACENT SIDES ARE GIVEN
 double triangle_adj(int *arr1, int *arr2) 
