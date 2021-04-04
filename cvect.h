@@ -23,8 +23,8 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-#include "area/area.h"
-#include "cent/cent.h"
+//#include "area/area.h"
+//#include "cent/cent.h"
 
 // STRUCT FOR RETURNING MULTIPLE VALUES IN UNITNORMAL()
 struct unormal
@@ -41,15 +41,18 @@ struct reci
     double *rec3;
 };
 
+typedef struct unormal u_norm;
+typedef struct reci recip;
+
 // FUNCTION TO CALCULATE THE DOT PRODUCT
-int dot(int *x, int *y)
+int dot(int x[3], int y[3])
 {
     int dot_product;
     for(int i = 0; i<3; i++)
         dot_product = dot_product + (x[i]*y[i]);
     return dot_product;
 }
-
+/*
 // FUNCTION TO CALCULATE THE CROSS PRODUCT
 int *cross(int *x, int *y)
 {
@@ -81,14 +84,20 @@ double projection(int *x, int *y)
 // FUNCTION TO FIND IF TWO VECTORS ARE PREPENDICULAR
 bool isPerpendicular(int *x, int *y)
 {
-    (dot(x,y) == 0)?return true:return false;
+    if (dot(x,y) == 0)
+        return true;
+    else
+        return false;
 }
 
 // FUNCTION TO FIND IF TWO VECTORS ARE COLLINEAR
 bool isCollinear(int *x,int *y)
 {
     int *res = cross(x,y);
-    ((res[0]==0)||(res[1]==0)||(res[2]==0))?return true:return false;
+    if ((res[0]==0)||(res[1]==0)||(res[2]==0))
+        return true;
+    else
+        return false;
 }
 
 // FUNCTION TO FIND UNIT VECTOR
@@ -101,9 +110,9 @@ double *unitVector(int *arr)
 }
 
 // FUNCTION TO FIND UNIT NORMAL
-struct unormal unitNormal(int *x, int *y)
+u_norm unitNormal(int *x, int *y)
 {
-    unormal un;
+    u_norm un;
     un.u_norm = unitVector(cross(x,y));
     for (int i=0;i<3;i++)
         un.u_norm_inv[i] = un.u_norm[i]*-1;
@@ -133,13 +142,16 @@ double *positionVector(int *x, int *y)
 // FUNCTION TO FIND IF TWO VECTORS ARE COPLANAR
 bool isCoplanar(int *x, int *y, int *z)
 {
-    (dot(cross(x,y),z) == 0)?return true:return false;
+    if (dot(cross(x,y),z) == 0)
+        return true;
+    else
+        return false;
 }
 
 // FUNCTION TO FIND THE RECIPROCAL OF THREE VECTORS
-struct reci reciprocal(int *x, int *y, int *z)
+recip reciprocal(int *x, int *y, int *z)
 {
-    reci r;
+    recip r;
     int *c1 = cross(y,z);
     int *c2 = cross(z,x);
     int *c3 = cross(x,y);
@@ -163,5 +175,5 @@ double minValue(int *x, int *y)
 {
     return -1.0*(modVector(x)*modVector(y));
 }
-
+*/
 #endif
