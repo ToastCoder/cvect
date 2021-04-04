@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////
 
-// PYVECT-C
+// CVECT
 
 // FILE NAME: CENT.H
 
@@ -23,7 +23,7 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-#include "pyvect.h"
+#include "../cvect.h"
 
 double *triangle(int *arr1, int *arr2, int *arr3)
 {
