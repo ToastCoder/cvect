@@ -68,13 +68,13 @@ double modVector(int *x)
 {   
     return sqrt((x[0]^2)+(x[1]^2)+(x[2]^2));
 }
-/*
+
 // FUNCTION TO FIND ANGLE BETWEEN TWO VECTORS
 double angle(int *x,int *y)
 {
-    return acos((dot(x,y))/(modVector(x)*modVector(y)));;
+    return acos(dot(x,y)/(modVector(x)*modVector(y)));
 }
-
+/*
 // FUNCTION TO FIND THE PROJECTION OF ONE VECTOR OVER ANOTHER
 double projection(int *x, int *y)
 {
