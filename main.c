@@ -16,8 +16,8 @@ int main()
     int a2[] = {4,5,6};
     int a3[] = {7,8,9};
     int a4[] = {1,5,9};
-    double res = sqrt(4.54);
-    //printf("%lf",res);
+    
+    //printf("%lf",acos(1));
     tester(a1,a2,a3,a4);
     return 0;
 }
