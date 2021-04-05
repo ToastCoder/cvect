@@ -6,7 +6,8 @@
 #include "cvect.h"
 void tester(int a1[3],int a2[3], int a3[3], int a4[3])
 {
-    printf("%d\n",dot(a1,a2));
+    int *arr = cross(a1,a2);
+    for(int i=0;i<3;i++) printf("%d",arr[i]);
 }
 int main()
 {
