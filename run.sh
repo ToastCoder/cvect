@@ -1,3 +1,3 @@
-gcc main.c
-./a.out
-rm a.out
+gcc main.c -o main -lm
+./main
+rm main
