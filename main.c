@@ -4,9 +4,9 @@
 #include <stdlib.h>
 
 #include "cvect.h"
-void tester(int a1[3],int a2[3], int a3[3], int a4[3])
+void tester(int a1[],int a2[], int a3[], int a4[])
 {
-    double a = modVector(a1);
+    double a = angle(a1,a2);
     //for(int i=0;i<3;i++) printf("%lf",arr[i]);
     printf("%lf",a);
 }
