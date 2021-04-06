@@ -10,7 +10,7 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     printf("Dot Product : %d\n",dot(a1,a2));
 
     // CROSS TESTER
-    int *c = cross(a2,a1);
+    int *c = cross(a2,a3);
     printf("Cross Product : ");
     for(int i=0;i<3;i++){printf("%d ",c[i]);}
     printf("\n");
@@ -25,14 +25,17 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     printf("Projection : %f\n",projection(a2,a3));
 
     //ISPERPENDICULAR TESTER
-    printf("IsPerpendicular : %s\n",isPerpendicular(a2,a4));
+    printf("IsPerpendicular : %d\n",isPerpendicular(a2,a4));
+
+    //ISCOLLINEAR TESTER
+    printf("IsCollinear : %d\n",isCollinear(a2,a3));
 
 }
 int main()
 {
     int a1[] = {1,2,3};
     int a2[] = {4,5,6};
-    int a3[] = {7,8,9};
+    int a3[] = {12,15,18};
     int a4[] = {0,0,0};
     
     //printf("%d\n",cross(a2,a4)[2]);
