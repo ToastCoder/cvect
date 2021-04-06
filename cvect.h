@@ -74,7 +74,7 @@ float modVector(int *x)
 // FUNCTION TO FIND ANGLE BETWEEN TWO VECTORS
 float angle(int *x,int *y)
 { 
-    return (dot(x,y)/(modVector(x)*modVector(y)));
+    return (float)(dot(x,y)/(modVector(x)*modVector(y)));
 }
 
 // FUNCTION TO FIND THE PROJECTION OF ONE VECTOR OVER ANOTHER
