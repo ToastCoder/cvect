@@ -37,9 +37,9 @@ struct unormal
 // STRUCT FOR RECIPROCAL() FUNCTION
 struct reci
 {
-    float *rec1;
-    float *rec2;
-    float *rec3;
+    float rec1[3];
+    float rec2[3];
+    float rec[3];
 };
 
 typedef struct unormal u_norm;
@@ -106,7 +106,7 @@ float *unitVector(int *arr)
         unit[i] = arr[i]/modVector(arr);
     return unit;
 }
-/*
+
 // FUNCTION TO FIND UNIT NORMAL
 u_norm unitNormal(int *x, int *y)
 {
@@ -116,7 +116,7 @@ u_norm unitNormal(int *x, int *y)
         un.u_norm_inv[i] = un.u_norm[i]*-1;
     return un;
 }
-
+/*
 // FUNCTION TO FIND BISECTOR OF TWO VECTORS
 double *bisector(int *x, int *y)
 {
