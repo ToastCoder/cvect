@@ -7,19 +7,22 @@
 void tester(int a1[],int a2[], int a3[], int a4[])
 {
     // DOT TESTER
-    printf("Dot Product: %d\n",dot(a1,a2));
+    printf("Dot Product : %d\n",dot(a1,a2));
 
     // CROSS TESTER
     int *c = cross(a1,a2);
-    printf("Cross Product: ");
+    printf("Cross Product : ");
     for(int i=0;i<3;i++){printf("%d ",c[i]);}
     printf("\n");
 
     // MODVECTOR TESTER
-    printf("Modulus of vector: %f\n",modVector(a1));
+    printf("Modulus of vector : %f\n",modVector(a1));
 
     // ANGLE TESTER
-    printf("Angle: %f\n",angle(a1,a2));
+    printf("Angle : %f\n",angle(a1,a2));
+
+    // PRPJECTION TESTER
+    printf("Projection : %f\n",projection(a2,a3));
 
 }
 int main()
