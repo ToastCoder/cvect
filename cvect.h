@@ -30,16 +30,16 @@
 // STRUCT FOR RETURNING MULTIPLE VALUES IN UNITNORMAL()
 struct unormal
 {
-    double *u_norm;
-    double *u_norm_inv;
+    float *u_norm;
+    float *u_norm_inv;
 };
 
 // STRUCT FOR RECIPROCAL() FUNCTION
 struct reci
 {
-    double *rec1;
-    double *rec2;
-    double *rec3;
+    float *rec1;
+    float *rec2;
+    float *rec3;
 };
 
 typedef struct unormal u_norm;
