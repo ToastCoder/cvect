@@ -84,22 +84,22 @@ float projection(int *x, int *y)
 }
 
 // FUNCTION TO FIND IF TWO VECTORS ARE PREPENDICULAR
-char *isPerpendicular(int *x, int *y)
+bool isPerpendicular(int *x, int *y)
 {
-    char *res = (dot(x,y) == 0)?"True":"False";
+    bool res = (dot(x,y) == 0)?true:false;
     return res;
 }
-/*
+
 // FUNCTION TO FIND IF TWO VECTORS ARE COLLINEAR
 bool isCollinear(int *x,int *y)
 {
     int *res = cross(x,y);
-    if ((res[0]==0)||(res[1]==0)||(res[2]==0))
+    if ((res[0]==0)&&(res[1]==0)&&(res[2]==0))
         return true;
     else
         return false;
 }
-
+/*
 // FUNCTION TO FIND UNIT VECTOR
 double *unitVector(int *arr)
 {
