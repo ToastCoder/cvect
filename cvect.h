@@ -88,11 +88,6 @@ char *isPerpendicular(int *x, int *y)
 {
     char *res = (dot(x,y) == 0)?"True":"False";
     return res;
-    /*
-    if (dot(x,y) == 0)
-        return true;
-    else
-        return false;*/
 }
 /*
 // FUNCTION TO FIND IF TWO VECTORS ARE COLLINEAR
