@@ -12,7 +12,7 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     // CROSS TESTER
     int *c = cross(a2,a1);
     printf("Cross Product : ");
-    for(int i=0;i<3;i++){printf("%d ",c[i]);}
+    for(int i=0;i<3;i++) printf("%d ",c[i]);
     printf("\n");
 
     // MODVECTOR TESTER
@@ -27,14 +27,20 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     //ISPERPENDICULAR TESTER
     printf("IsPerpendicular : %d\n",isPerpendicular(a2,a4));
 
-}
+    float *u = unitVector(a1);
+    printf("Unit Vector : ");
+    for(int i=0;i<3;i++) printf("%f ",u[i]);
+    printf("\n");
 
+}
+/*
 void area_tester(int a1[],int a2[],int a3[],int a4[])
 {
     // TRIANGLE ADJ TESTER
     printf("Triangle Adj Area : %lf\n",triangle_adj(a1,a2));
 
 }
+*/
 int main()
 {
     int a1[] = {1,2,3};
@@ -45,6 +51,6 @@ int main()
     //printf("%d\n",cross(a2,a4)[2]);
 
     tester(a1,a2,a3,a4);
-    area_tester(a1,a2,a3,a4);
+    //area_tester(a1,a2,a3,a4);
     return 0;
 }
