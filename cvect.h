@@ -78,7 +78,7 @@ float angle(int *x,int *y)
 }
 
 // FUNCTION TO FIND THE PROJECTION OF ONE VECTOR OVER ANOTHER
-double projection(int *x, int *y)
+float projection(int *x, int *y)
 {
     return dot(x,y)/modVector(y);
 }
