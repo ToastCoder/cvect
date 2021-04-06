@@ -23,7 +23,7 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-//#include "area/area.h"
+#include "area/area.h"
 //#include "cent/cent.h"
 
 /*
