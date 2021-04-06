@@ -49,7 +49,7 @@ typedef struct reci recip;
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y)
 {
-    int dot_product;
+    int dot_product = 0;
     for(int i = 0; i<3; i++)
         dot_product = dot_product + (x[i]*y[i]);
     return dot_product;
