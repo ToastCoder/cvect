@@ -26,6 +26,7 @@
 //#include "area/area.h"
 //#include "cent/cent.h"
 
+/*
 // STRUCT FOR RETURNING MULTIPLE VALUES IN UNITNORMAL()
 struct unormal
 {
@@ -43,6 +44,7 @@ struct reci
 
 typedef struct unormal u_norm;
 typedef struct reci recip;
+*/
 
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y)
@@ -74,13 +76,13 @@ double angle(int *x,int *y)
 {
     return acos(dot(x,y)/(modVector(x)*modVector(y)));
 }
-/*
+
 // FUNCTION TO FIND THE PROJECTION OF ONE VECTOR OVER ANOTHER
 double projection(int *x, int *y)
 {
     return dot(x,y)/modVector(y);
 }
-
+/*
 // FUNCTION TO FIND IF TWO VECTORS ARE PREPENDICULAR
 bool isPerpendicular(int *x, int *y)
 {

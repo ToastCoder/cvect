@@ -6,9 +6,15 @@
 #include "cvect.h"
 void tester(int a1[],int a2[], int a3[], int a4[])
 {
-    double a = angle(a1,a2);
-    //for(int i=0;i<3;i++) printf("%lf",arr[i]);
-    printf("%lf",a);
+    // DOT TESTER
+    printf("Dot Product: %d\n",dot(a1,a2));
+
+    // CROSS TESTER
+    int *c = cross(a1,a2);
+    printf("Cross Product: ");
+    for(int i=0;i<3;i++){printf("%d ",c[i]);}
+    printf("\n");
+
 }
 int main()
 {
