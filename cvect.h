@@ -82,16 +82,19 @@ float projection(int *x, int *y)
 {
     return dot(x,y)/modVector(y);
 }
-/*
+
 // FUNCTION TO FIND IF TWO VECTORS ARE PREPENDICULAR
-bool isPerpendicular(int *x, int *y)
+char *isPerpendicular(int *x, int *y)
 {
+    char *res = (dot(x,y) == 0)?"True":"False";
+    return res;
+    /*
     if (dot(x,y) == 0)
         return true;
     else
-        return false;
+        return false;*/
 }
-
+/*
 // FUNCTION TO FIND IF TWO VECTORS ARE COLLINEAR
 bool isCollinear(int *x,int *y)
 {
