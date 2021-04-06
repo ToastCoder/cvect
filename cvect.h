@@ -23,7 +23,7 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-#include "area/area.h"
+//#include "area/area.h"
 //#include "cent/cent.h"
 
 /*
@@ -99,16 +99,16 @@ bool isCollinear(int *x,int *y)
     else
         return false;
 }
-/*
+
 // FUNCTION TO FIND UNIT VECTOR
-double *unitVector(int *arr)
+float *unitVector(int *arr)
 {
-    double *unit;
+    static float unit[3];
     for(int i=0;i<3;i++)
-        unit[i] = unit[i]/modVector(arr);
+        unit[i] = arr[i]/modVector(arr);
     return unit;
 }
-
+/*
 // FUNCTION TO FIND UNIT NORMAL
 u_norm unitNormal(int *x, int *y)
 {
