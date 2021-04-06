@@ -26,7 +26,7 @@
 //#include "area/area.h"
 //#include "cent/cent.h"
 
-/*
+
 // STRUCT FOR RETURNING MULTIPLE VALUES IN UNITNORMAL()
 struct unormal
 {
@@ -44,7 +44,7 @@ struct reci
 
 typedef struct unormal u_norm;
 typedef struct reci recip;
-*/
+
 
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y)
