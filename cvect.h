@@ -66,15 +66,15 @@ int *cross(int *x, int *y)
 }
 
 // FUNCTION TO CALCULATE THE MODULUS OF A VECTOR
-double modVector(int *x)
+float modVector(int *x)
 {   
-    return sqrt((x[0]^2)+(x[1]^2)+(x[2]^2));
+    return (float)sqrt((x[0]^2)+(x[1]^2)+(x[2]^2));
 }
 
 // FUNCTION TO FIND ANGLE BETWEEN TWO VECTORS
-double angle(int *x,int *y)
-{
-    return acos(dot(x,y)/(modVector(x)*modVector(y)));
+float angle(int *x,int *y)
+{ 
+    return (dot(x,y)/(modVector(x)*modVector(y)));
 }
 
 // FUNCTION TO FIND THE PROJECTION OF ONE VECTOR OVER ANOTHER
