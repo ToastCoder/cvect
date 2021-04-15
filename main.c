@@ -27,10 +27,14 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     //ISPERPENDICULAR TESTER
     printf("IsPerpendicular : %d\n",isPerpendicular(a2,a4));
 
-    u_norm u = unitNormal(a1,a2);
+    float **u = unitNormal(a1,a2);
     printf("Unit Normal : ");
-    float *unorm = u.u_norm;
-    for(int i=0;i<3;i++) printf("%f ",unorm[i]);
+    for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        printf("%f",u[i][j]);
+    }
+    printf("\n");
+    }
     printf("\n");
 
 }
