@@ -108,6 +108,16 @@ float *unitVector(int *arr)
 }
 
 // FUNCTION TO FIND UNIT NORMAL
+
+float **unitNormal(int *x, int *y)
+{
+    static float **res;
+    float *temp = unitVector(cross(x,y));
+    for(int i=0;i<3;i++) res[0][i] = temp[i];
+    for(int i=0;i<3;i++) res[1][i] = temp[i]*-1;
+    return res;
+}
+/*
 u_norm unitNormal(int *x, int *y)
 {
     u_norm un;
