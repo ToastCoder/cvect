@@ -26,26 +26,6 @@
 //#include "area/area.h"
 //#include "cent/cent.h"
 
-
-// STRUCT FOR RETURNING MULTIPLE VALUES IN UNITNORMAL()
-struct unormal
-{
-    float *u_norm;
-    float *u_norm_inv;
-};
-
-// STRUCT FOR RECIPROCAL() FUNCTION
-struct reci
-{
-    float rec1[3];
-    float rec2[3];
-    float rec[3];
-};
-
-typedef struct unormal u_norm;
-typedef struct reci recip;
-
-
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y)
 {
