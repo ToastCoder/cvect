@@ -26,11 +26,11 @@
 #include "../cvect.h"
 
 // FUNCTION TO FIND AREA OF TRIANGLE WHERE ADJACENT SIDES ARE GIVEN
-double triangle_adj(int *arr1, int *arr2) 
+float triangle_adj(int *arr1, int *arr2) 
 {
-    return abs(sqrt(modVector(cross(arr1,arr2))));;
+    return (float)sqrt(modVector(cross(arr1,arr2)));
 }
-
+/*
 // FUNCTION TO FIND AREA OF TRIANGLE WHERE POSITION VECTORS ARE GIVEN
 double triangle_pos(int *arr1, int *arr2, int *arr3)
 {
@@ -60,5 +60,5 @@ double tetrahedron(int *arr1, int *arr2, int *arr3)
 {
     return abs(0.1666*dot(cross(arr1,arr2),arr3));
 }
-
+*/
 #endif
