@@ -7,10 +7,10 @@
 void tester(int a1[],int a2[], int a3[], int a4[])
 {
     // DOT TESTER
-    printf("Dot Product : %d\n",dot(a1,a2));
+    printf("Dot Product : %d\n",dot(a4,a3));
 
     // CROSS TESTER
-    int *c = cross(a3,a1);
+    int *c = cross(a2,a3);
     printf("Cross Product : ");
     for(int i=0;i<3;i++) printf("%d ",c[i]);
     printf("\n");
@@ -38,7 +38,7 @@ void tester(int a1[],int a2[], int a3[], int a4[])
 
     //UNITNORMAL TESTER
     float **arr;
-    arr = unitNormal(a1,a2);
+    arr = unitNormal(a2,a3);
     printf("Unit Normal : \n");
     for(int i=0;i<2;i++)
     {
@@ -52,7 +52,7 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     //BISECTOR TESTER
     float *bs;
     bs = bisector(a1,a2);
-    printf("Bisector: \n");
+    printf("Bisector: ");
     for (int i=0;i<3;i++)
     {
         printf("%f ",bs[i]);
@@ -62,7 +62,7 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     //POSITION TESTER
     int *pv;
     pv = positionVector(a1,a2);
-    printf("Position Vector: \n");
+    printf("Position Vector: ");
     for (int i=0;i<3;i++)
     {
         printf("%d ",pv[i]);
@@ -128,10 +128,11 @@ void cent_tester(int a1[], int a2[], int a3[], int a4[])
 }
 int main()
 {
-    int a1[] = {12,2,3};
-    int a2[] = {4,9,5};
-    int a3[] = {-7,-8,-9};
-    int a4[] = {1,0,0};
+    int a1[] = {10,2,4};
+    int a2[] = {4,2,6};
+    int a3[] = {-7,-6,-9};
+    int a4[] = {4,20,12};
+    int a5[] = {1,0,0};
     
     //printf("%d\n",cross(a2,a4)[2]);
 
