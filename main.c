@@ -116,13 +116,22 @@ void cent_tester(int a1[], int a2[], int a3[], int a4[])
     }
     printf("\n");
 
+    //TETRAHEDRON TESTER
+    float *tet;
+    tet = tetrahedron(a1,a2,a3,a4);
+    printf("Centroid (Tetrahedron) : \n");
+    for (int i=0;i<3;i++)
+    {
+        printf("%f ",tet[i]);
+    }
+    printf("\n");
 }
 int main()
 {
     int a1[] = {12,2,3};
     int a2[] = {4,9,5};
     int a3[] = {-7,-8,-9};
-    int a4[] = {0,0,0};
+    int a4[] = {1,0,0};
     
     //printf("%d\n",cross(a2,a4)[2]);
 
