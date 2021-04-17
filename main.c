@@ -103,6 +103,20 @@ void area_tester(int a1[],int a2[],int a3[],int a4[])
 
 }
 */
+
+void cent_tester(int a1[], int a2[], int a3[], int a4[])
+{
+    //TRIANGLE TESTER
+    float *tr;
+    tr = triangle(a1,a2,a3);
+    printf("Centroid (Triangle) : \n");
+    for (int i=0;i<3;i++)
+    {
+        printf("%f ",tr[i]);
+    }
+    printf("\n");
+
+}
 int main()
 {
     int a1[] = {12,2,3};
@@ -114,5 +128,6 @@ int main()
 
     tester(a1,a2,a3,a4);
     //area_tester(a1,a2,a3,a4);
+    cent_tester(a1,a2,a3,a4);
     return 0;
 }
