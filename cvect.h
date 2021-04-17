@@ -124,7 +124,7 @@ float *positionVector(int *x, int *y)
         pos[i] = 0.5*(x[i]+y[i]);
     return pos;
 }
-/*
+
 // FUNCTION TO FIND IF TWO VECTORS ARE COPLANAR
 bool isCoplanar(int *x, int *y, int *z)
 {
@@ -133,7 +133,7 @@ bool isCoplanar(int *x, int *y, int *z)
     else
         return false;
 }
-
+/*
 // FUNCTION TO FIND THE RECIPROCAL OF THREE VECTORS
 recip reciprocal(int *x, int *y, int *z)
 {
