@@ -40,7 +40,7 @@ int *cross(int *x, int *y)
 {
     static int cross_product[3];
     cross_product[0] = x[1]*y[2] - x[2]*y[1];
-    cross_product[1] = x[2]*x[0] - x[0]*y[2];
+    cross_product[1] = (x[2]*x[0] - x[0]*y[2])*-1;
     cross_product[2] = x[0]*y[1] - x[1]*y[0];
     return cross_product;
 }
@@ -90,7 +90,8 @@ float *unitVector(int *arr)
 // FUNCTION TO FIND UNIT NORMAL
 float **unitNormal(int *x, int *y)
 {
-    float *temp = unitVector(cross(x,y));
+    int *temp1 = cross(x,y);
+    float *temp = unitVector(temp1);
     float **arr=(float **)malloc(sizeof(float *)*2);
     for(int i=0;i<2;i++)
     {
@@ -103,22 +104,22 @@ float **unitNormal(int *x, int *y)
     }
     return arr;
 }
-/*
+
 // FUNCTION TO FIND BISECTOR OF TWO VECTORS
-double *bisector(int *x, int *y)
+float *bisector(int *x, int *y)
 {
-    double *bsect;
-    double *unit_a = unitVector(x);
-    double *unit_b = unitVector(y);
+    float *bsect;
+    float *unit_a = unitVector(x);
+    float *unit_b = unitVector(y);
     for (int i=0;i<3;i++)
         bsect[i] = unit_a[i]+unit_b[i];
     return bsect;
 }
-
+/*
 // FUNCTION TO FIND THE POSITION VECTOR
-double *positionVector(int *x, int *y)
+float *positionVector(int *x, int *y)
 {
-    double *pos;
+    float *pos;
     for(int i=0;i<3;i++)
         pos[i] = 0.5*(x[i]+y[i]);
     return pos;
@@ -150,13 +151,13 @@ recip reciprocal(int *x, int *y, int *z)
 }
 
 // FUNCTION TO FIND THE MAXIMUM VALUE OF ANY TWO VECTORS
-double maxValue(int *x, int *y)
+float maxValue(int *x, int *y)
 {
     return modVector(x)*modVector(y);
 }
 
 // FUNCTION TO FIND THE MINIMUM VALUE OF ANY TWO VECTORS
-double minValue(int *x, int *y)
+float minValue(int *x, int *y)
 {
     return -1.0*(modVector(x)*modVector(y));
 }
