@@ -23,7 +23,7 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-//#include "area/area.h"
+#include "area/area.h"
 #include "cent/cent.h"
 
 // FUNCTION TO CALCULATE THE DOT PRODUCT
@@ -144,9 +144,8 @@ float **reciprocal(int *x, int *y, int *z)
         r[i]=(float *)malloc(sizeof(float)*3);
         for (int j=0;j<3;j++)
         {
-            if (i == 0){
+            if (i == 0)
                 r[i][j] = ((float)cross(y,z)[j]/(dot(cross(x,y),z)));
-            }
             else if (i == 1)
                 r[i][j] = ((float)cross(z,x)[j]/((float)dot(t,z)));
             else
