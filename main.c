@@ -73,17 +73,23 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     printf("IsCoplanar : %d\n",isCoplanar(a1,a2,a3));
 
     //RECIPROCAL TESTER
-    int **rec;
+    float **rec;
     rec = reciprocal(a1,a2,a3);
     printf("Reciprocal : \n");
     for(int i=0;i<3;i++)
     {
         for(int j=0;j<3;j++)
         {
-            printf("%d ",rec[i][j]);
+            printf("%f ",rec[i][j]);
         }
         printf("\n");
     }
+
+    // MINVALUE TESTER
+    printf("minValue : %f\n",minValue(a1,a2));
+
+    // MAXVALUE TESTER
+    printf("maxValue : %f\n",maxValue(a1,a2));
 }
 
    
