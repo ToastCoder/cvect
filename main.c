@@ -27,15 +27,25 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     //ISPERPENDICULAR TESTER
     printf("IsPerpendicular : %d\n",isPerpendicular(a2,a4));
 
-    //UNITNORMAL TESTER
-    float **u = unitNormal(a1,a2);
-    printf("Unit Normal : ");
-    for(int i=0;i<3;i++){
-    for(int j=0;j<3;j++) printf("%f",u[i][j]);
-    printf("\n");
-    }
+    // UNIT VECTOR TESTER
+    float *res = unitVector(a2);
+    printf("Unit Vector : ");
+    for(int i=0;i<3;i++) printf("%f ",res[i]);
     printf("\n");
 
+    //UNITNORMAL TESTER
+    float **arr;
+    arr = unitNormal(a1,a2);
+    printf("Unit Normal : \n");
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            printf("%f ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
 }
 /*
 void area_tester(int a1[],int a2[],int a3[],int a4[])
