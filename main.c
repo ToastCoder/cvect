@@ -99,8 +99,8 @@ void area_tester(int a1[],int a2[],int a3[],int a4[])
 */
 int main()
 {
-    int a1[] = {1,2,3};
-    int a2[] = {4,6,5};
+    int a1[] = {12,2,3};
+    int a2[] = {4,9,5};
     int a3[] = {-7,-8,-9};
     int a4[] = {0,0,0};
     
