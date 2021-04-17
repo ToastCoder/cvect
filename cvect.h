@@ -48,7 +48,7 @@ int *cross(int *x, int *y)
 // FUNCTION TO CALCULATE THE MODULUS OF A VECTOR
 float modVector(int *x)
 {   
-    return (float)sqrt((x[0]^2)+(x[1]^2)+(x[2]^2));
+    return (float)sqrt((x[0]*x[0])+(x[1]*x[1])+(x[2]*x[2]));
 }
 
 // FUNCTION TO FIND ANGLE BETWEEN TWO VECTORS
