@@ -58,6 +58,16 @@ void tester(int a1[],int a2[], int a3[], int a4[])
         printf("%f ",bs[i]);
     }
     printf("\n");
+
+    //POSITION TESTER
+    float *pv;
+    pv = positionVector(a1,a2);
+    printf("Position Vector: \n");
+    for (int i=0;i<3;i++)
+    {
+        printf("%f ",pv[i]);
+    }
+    printf("\n");
 }
 
    
