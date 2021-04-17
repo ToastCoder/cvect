@@ -87,25 +87,32 @@ float *unitVector(int *arr)
     return unit;
 }
 
-// FUNCTION TO FIND UNIT NORMAL
-
 float **unitNormal(int *x, int *y)
 {
-    static float **res;
+    float *temp = unitVector(cross(x,y));
+    float **arr=(float **)malloc(sizeof(float *)*2);
+    for(int i=0;i<2;i++)
+    {
+        arr[i]=(float *)malloc(sizeof(float)*3);
+        for(int j=0;j<3;j++)
+        {
+            if (i==0) arr[i][j] = temp[j];
+            else arr[i][j] = temp[j]*-1;
+        }
+    }
+    return arr;
+}
+/*
+// FUNCTION TO FIND UNIT NORMAL
+float (*unitNormal(int *x, int *y))[3]
+{
+    static float res[2][3];
     float *temp = unitVector(cross(x,y));
     for(int i=0;i<3;i++) res[0][i] = temp[i];
     for(int i=0;i<3;i++) res[1][i] = temp[i]*-1;
     return res;
 }
-/*
-u_norm unitNormal(int *x, int *y)
-{
-    u_norm un;
-    un.u_norm = unitVector(cross(x,y));
-    for (int i=0;i<3;i++)
-        un.u_norm_inv[i] = un.u_norm[i]*-1;
-    return un;
-}
+*/
 /*
 // FUNCTION TO FIND BISECTOR OF TWO VECTORS
 double *bisector(int *x, int *y)
