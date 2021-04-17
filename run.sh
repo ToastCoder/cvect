@@ -1,3 +1,3 @@
-gcc main.c -o main -lm
-./main
-rm main
+gcc area.c -o a -lm
+./a
+rm a
