@@ -147,11 +147,11 @@ float **reciprocal(int *x, int *y, int *z)
         for (int j=0;j<3;j++)
         {
             if (i==0)
-                r[i][j] = c1[j]/dot(cross(x,y),z);
+                r[i][j] = (float)c1[j]/dot(cross(x,y),z);
             else if (i==1)
-                r[i][j] = c2[j]/dot(cross(x,y),z);
+                r[i][j] = (float)c2[j]/dot(cross(x,y),z);
             else if (i==2)
-                r[i][j] = c3[j]/dot(cross(x,y),z);
+                r[i][j] = (float)c3[j]/dot(cross(x,y),z);
         }
     }
     return r;
