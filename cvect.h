@@ -108,7 +108,7 @@ float **unitNormal(int *x, int *y)
 // FUNCTION TO FIND BISECTOR OF TWO VECTORS
 float *bisector(int *x, int *y)
 {
-    float *bsect;
+    static float bsect[3];
     float *unit_a = unitVector(x);
     float *unit_b = unitVector(y);
     for (int i=0;i<3;i++)
