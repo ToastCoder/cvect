@@ -10,13 +10,13 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     printf("Dot Product : %d\n",dot(a1,a2));
 
     // CROSS TESTER
-    int *c = cross(a2,a1);
+    int *c = cross(a3,a1);
     printf("Cross Product : ");
     for(int i=0;i<3;i++) printf("%d ",c[i]);
     printf("\n");
 
     // MODVECTOR TESTER
-    printf("Modulus of vector : %f\n",modVector(a1));
+    printf("Modulus of vector : %f\n",modVector(a3));
 
     // ANGLE TESTER
     printf("Angle : %f\n",angle(a1,a2));
@@ -28,7 +28,7 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     printf("IsPerpendicular : %d\n",isPerpendicular(a2,a4));
 
     // UNIT VECTOR TESTER
-    float *res = unitVector(a2);
+    float *res = unitVector(a3);
     printf("Unit Vector : ");
     for(int i=0;i<3;i++) printf("%f ",res[i]);
     printf("\n");
@@ -58,8 +58,8 @@ void area_tester(int a1[],int a2[],int a3[],int a4[])
 int main()
 {
     int a1[] = {1,2,3};
-    int a2[] = {4,5,6};
-    int a3[] = {7,8,9};
+    int a2[] = {4,5,2};
+    int a3[] = {-7,-8,-9};
     int a4[] = {0,0,0};
     
     //printf("%d\n",cross(a2,a4)[2]);
