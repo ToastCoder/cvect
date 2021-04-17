@@ -117,9 +117,9 @@ float *bisector(int *x, int *y)
 }
 
 // FUNCTION TO FIND THE POSITION VECTOR
-float *positionVector(int *x, int *y)
+int *positionVector(int *x, int *y)
 {
-    static float pos[3];
+    static int pos[3];
     for(int i=0;i<3;i++)
         pos[i] = 0.5*(x[i]+y[i]);
     return pos;
