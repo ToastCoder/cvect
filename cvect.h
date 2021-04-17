@@ -108,18 +108,18 @@ float **unitNormal(int *x, int *y)
 // FUNCTION TO FIND BISECTOR OF TWO VECTORS
 float *bisector(int *x, int *y)
 {
-    float *bsect;
+    static float bsect[3];
     float *unit_a = unitVector(x);
     float *unit_b = unitVector(y);
     for (int i=0;i<3;i++)
         bsect[i] = unit_a[i]+unit_b[i];
     return bsect;
 }
-/*
+
 // FUNCTION TO FIND THE POSITION VECTOR
 float *positionVector(int *x, int *y)
 {
-    float *pos;
+    static float pos[3];
     for(int i=0;i<3;i++)
         pos[i] = 0.5*(x[i]+y[i]);
     return pos;
@@ -135,21 +135,28 @@ bool isCoplanar(int *x, int *y, int *z)
 }
 
 // FUNCTION TO FIND THE RECIPROCAL OF THREE VECTORS
-recip reciprocal(int *x, int *y, int *z)
+float **reciprocal(int *x, int *y, int *z)
 {
-    recip r;
     int *c1 = cross(y,z);
     int *c2 = cross(z,x);
     int *c3 = cross(x,y);
+    float **r=(float **)malloc(sizeof(float *)*3);
     for (int i=0;i<3;i++)
     {
-        r.rec1[i] = c1[i]/dot(cross(x,y),z);
-        r.rec2[i] = c2[i]/dot(cross(x,y),z);
-        r.rec3[i] = c3[i]/dot(cross(x,y),z);
+        r[i]=(float *)malloc(sizeof(float)*3);
+        for (int j=0;j<3;j++)
+        {
+            if (i==0)
+                r[i][j] = c1[i]/dot(cross(x,y),z);
+            else if (i==1)
+                r[i][j] = c2[i]/dot(cross(x,y),z);
+            else if (i==2)
+                r[i][j] = c3[i]/dot(cross(x,y),z);
+        }
     }
     return r;
 }
-
+/*
 // FUNCTION TO FIND THE MAXIMUM VALUE OF ANY TWO VECTORS
 float maxValue(int *x, int *y)
 {
