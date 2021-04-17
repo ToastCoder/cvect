@@ -135,28 +135,28 @@ bool isCoplanar(int *x, int *y, int *z)
 }
 
 // FUNCTION TO FIND THE RECIPROCAL OF THREE VECTORS
-int **reciprocal(int *x, int *y, int *z)
+float **reciprocal(int *x, int *y, int *z)
 {
     int *c1 = cross(y,z);
     int *c2 = cross(z,x);
     int *c3 = cross(x,y);
-    int **r=(int **)malloc(sizeof(int *)*3);
+    float **r=(float **)malloc(sizeof(float *)*3);
     for (int i=0;i<3;i++)
     {
-        r[i]=(int *)malloc(sizeof(int)*3);
+        r[i]=(float *)malloc(sizeof(float)*3);
         for (int j=0;j<3;j++)
         {
-            if (i==0)
-                r[i][j] = (int)c1[i]/(dot(c3,z));
-            else if (i==1)
-                r[i][j] = (int)c2[i]/(dot(c3,z));
-            else if (i==2)
-                r[i][j] = (int)c3[i]/(dot(c3,z));
+                r[i][j] = ((float)c1[j]/(dot(c3,z)));
+                r[i][j] = ((float)c2[j]/((float)dot(c3,z)));
+                r[i][j] = ((float)c3[j]/((float)dot(c3,z)));
         }
     }
+    //printf("%d \n",c1[0]);
+    //printf("%d \n",dot(c3,z));
+    //printf("%f \n",((float)c1[0]/(dot(c3,z))));
     return r;
 }
-/*
+
 // FUNCTION TO FIND THE MAXIMUM VALUE OF ANY TWO VECTORS
 float maxValue(int *x, int *y)
 {
@@ -168,5 +168,5 @@ float minValue(int *x, int *y)
 {
     return -1.0*(modVector(x)*modVector(y));
 }
-*/
+
 #endif
