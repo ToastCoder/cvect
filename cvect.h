@@ -135,23 +135,23 @@ bool isCoplanar(int *x, int *y, int *z)
 }
 
 // FUNCTION TO FIND THE RECIPROCAL OF THREE VECTORS
-float **reciprocal(int *x, int *y, int *z)
+int **reciprocal(int *x, int *y, int *z)
 {
     int *c1 = cross(y,z);
     int *c2 = cross(z,x);
     int *c3 = cross(x,y);
-    float **r=(float **)malloc(sizeof(float *)*3);
+    int **r=(int **)malloc(sizeof(int *)*3);
     for (int i=0;i<3;i++)
     {
-        r[i]=(float *)malloc(sizeof(float)*3);
+        r[i]=(int *)malloc(sizeof(int)*3);
         for (int j=0;j<3;j++)
         {
             if (i==0)
-                r[i][j] = (float)c1[i]/dot(cross(x,y),z);
+                r[i][j] = (int)c1[i]/(dot(c3,z));
             else if (i==1)
-                r[i][j] = (float)c2[i]/dot(cross(x,y),z);
+                r[i][j] = (int)c2[i]/(dot(c3,z));
             else if (i==2)
-                r[i][j] = (float)c3[i]/dot(cross(x,y),z);
+                r[i][j] = (int)c3[i]/(dot(c3,z));
         }
     }
     return r;
