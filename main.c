@@ -49,7 +49,21 @@ void tester(int a1[],int a2[], int a3[], int a4[])
         printf("\n");
     }
     printf("\n");
+
+    //BISECTOR TESTER
+    float *bs;
+    bs = bisector(a1,a2);
+    printf("Bisector: \n");
+    for (int i=0;i<3;i++)
+    {
+        printf("%f ",bs[i]);
+    }
+    printf("\n");
 }
+
+   
+
+
 /*
 void area_tester(int a1[],int a2[],int a3[],int a4[])
 {
