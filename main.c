@@ -10,7 +10,7 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     printf("Dot Product : %d\n",dot(a4,a3));
 
     // CROSS TESTER
-    int *c = cross(a2,a3);
+    int *c = cross(a1,a2);
     printf("Cross Product : ");
     for(int i=0;i<3;i++) printf("%d ",c[i]);
     printf("\n");
@@ -97,6 +97,18 @@ void area_tester(int a1[],int a2[],int a3[],int a4[])
     // TRIANGLE ADJ TESTER
     printf("Triangle Adj Area : %f\n",triangle_adj(a1,a2));
 
+    // TRIANGLE POS TESTER
+    printf("Triangle Pos Area : %f\n",triangle_pos(a1,a2,a3));
+
+    // QUADRILATERAL AREA TESTER
+    printf("Quadrilateral Area : %f\n",quad(a1,a2));
+
+    // PARALLELOGRAM AREA TESTER
+    printf("Parallelogram Area : %f\n",parallelogram(a1,a2));
+
+    // TETRAHEDRON AREA TESTER
+    printf("Tetrahedron Area : %f\n",tetrahedron(a1,a2,a3));
+
 }
 
 
@@ -104,7 +116,7 @@ void cent_tester(int a1[], int a2[], int a3[], int a4[])
 {
     //TRIANGLE TESTER
     float *tr;
-    tr = triangle(a1,a2,a3);
+    tr = triangle_cent(a1,a2,a3);
     printf("Centroid (Triangle) : \n");
     for (int i=0;i<3;i++)
     {
@@ -114,7 +126,7 @@ void cent_tester(int a1[], int a2[], int a3[], int a4[])
 
     //TETRAHEDRON TESTER
     float *tet;
-    tet = tetrahedron(a1,a2,a3,a4);
+    tet = tetrahedron_cent(a1,a2,a3,a4);
     printf("Centroid (Tetrahedron) : \n");
     for (int i=0;i<3;i++)
     {
