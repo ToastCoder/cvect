@@ -91,7 +91,7 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     // MAXVALUE TESTER
     printf("maxValue : %f\n",maxValue(a1,a2));
 }
-
+/*
 void area_tester(int a1[],int a2[],int a3[],int a4[])
 {
     // TRIANGLE ADJ TESTER
@@ -121,7 +121,7 @@ void cent_tester(int a1[], int a2[], int a3[], int a4[])
         printf("%f ",tet[i]);
     }
     printf("\n");
-}
+}*/
 int main()
 {
     int a1[] = {10,2,4};
@@ -133,7 +133,7 @@ int main()
     //printf("%d\n",cross(a2,a4)[2]);
 
     tester(a1,a2,a3,a4);
-    area_tester(a1,a2,a3,a4);
-    cent_tester(a1,a2,a3,a4);
+    //area_tester(a1,a2,a3,a4);
+    //cent_tester(a1,a2,a3,a4);
     return 0;
 }
