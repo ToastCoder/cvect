@@ -25,4 +25,7 @@
 // REQUIRED SUBHEADERS
 #include "../cvect.h"
 
+// FUNCTION TO THE DISTANCE BETWEEN TWO PARALLEL LINES
+float pl_line(int *a1, int *a2, int *u);
+
 #endif
