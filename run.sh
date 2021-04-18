@@ -1,3 +1,3 @@
-gcc area.c -o a -lm
-./a
-rm a
+gcc cvect.c area/area.c cent/cent.c main.c -o main -lm
+./main
+rm main
