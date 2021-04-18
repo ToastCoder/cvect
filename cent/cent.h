@@ -26,9 +26,9 @@
 #include "../cvect.h"
 
 //FUNCTION TO FIND CENTROID IOF A TRIANGLE
-float *triangle(int *arr1, int *arr2, int *arr3);
+float *triangle_cent(int *arr1, int *arr2, int *arr3);
 
 //FUNCTION TO FIND CENTROID OF A TETRAHEDRON
-float *tetrahedron(int *arr1, int *arr2, int *arr3, int *arr4);
+float *tetrahedron_cent(int *arr1, int *arr2, int *arr3, int *arr4);
 
 #endif
