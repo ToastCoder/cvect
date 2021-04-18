@@ -1,5 +1,5 @@
 compile:
-	gcc cvect.c main.c -o main -lm
+	gcc cvect.c area/area.c main.c -o main -lm
 run:
 	./main
 clean:
