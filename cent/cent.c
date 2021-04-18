@@ -1,3 +1,15 @@
+/////////////////////////////////////////////////////
+
+// CVECT
+
+// FILE NAME: CENT.C
+
+// DEVELOPED BY: VIGNESHWAR RAVICHANDAR, MOULISHANKAR M R
+
+// LICENSE: MIT LICENSE
+
+/////////////////////////////////////////////////////
+
 // REQUIRED LIBRARY FILES
 #include <stdio.h>
 #include <stdlib.h>
