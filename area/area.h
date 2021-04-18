@@ -28,4 +28,16 @@
 // FUNCTION TO FIND AREA OF TRIANGLE WHERE ADJACENT SIDES ARE GIVEN
 float triangle_adj(int *arr1, int *arr2);
 
+// FUNCTION TO FIND AREA OF TRIANGLE WHERE POSITION VECTORS ARE GIVEN
+float triangle_pos(int *arr1, int *arr2, int *arr3);
+
+// FUNCTION TO FIND THE AREA OF A QUADRILATERAL WHERE THE DIAGONALS ARE GIVEN
+float quad(int *d1, int *d2);
+
+// FUNCTION TO FIND AREA OF PARALLELOGRAM WHEN TWO ADJACENT SIDES ARE GIVEN
+float parallelogram(int *arr1, int *arr2);
+
+// FUNCTION TO FIND THE AREA OF TETRAHEDRON WHERE POSITIONAL VECTORS ARE GIVEN
+float tetrahedron(int *arr1, int *arr2, int *arr3);
+
 #endif
