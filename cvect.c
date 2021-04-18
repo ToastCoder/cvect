@@ -139,9 +139,9 @@ float **reciprocal(int *x, int *y, int *z)
             if (i == 0)
                 r[i][j] = ((float)cross(y,z)[j]/(dot(cross(x,y),z)));
             else if (i == 1)
-                r[i][j] = ((float)cross(z,x)[j]/((float)dot(t,z)));
+                r[i][j] = ((float)cross(z,x)[j]/(dot(cross(x,y),z)));
             else
-                r[i][j] = ((float)cross(x,y)[j]/((float)dot(t,z)));
+                r[i][j] = ((float)cross(x,y)[j]/(dot(cross(x,y),z)));
         }
     }
     return r;
