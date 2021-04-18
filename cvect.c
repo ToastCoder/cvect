@@ -16,6 +16,8 @@
 #include <math.h>
 #include <stdbool.h>
 
+#include "cvect.h"
+
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y)
 {
