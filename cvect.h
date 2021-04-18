@@ -25,6 +25,7 @@
 // REQUIRED SUBHEADERS
 #include "area/area.h"
 #include "cent/cent.h"
+#include "dist/dist.h"
 
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y);
