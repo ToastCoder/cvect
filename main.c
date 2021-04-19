@@ -140,7 +140,8 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[])
     //PL_LINE 
     float pd = pl_line(a1,a2,a3);
     printf("Distance between Two Parallel Lines : %f\n",pd);
-
+    
+    //SK_LINE
     float sd = sk_line(a1,a2,a3,a4);
     printf("Distance between Two Skew Lines : %f\n",sd);
 }
@@ -153,8 +154,6 @@ int main()
     int a4[] = {4,20,12};
     int a5[] = {1,0,0};
     
-    //printf("%d\n",cross(a2,a4)[2]);
-
     tester(a1,a2,a3,a4);
     area_tester(a1,a2,a3,a4);
     cent_tester(a1,a2,a3,a4);
