@@ -23,7 +23,6 @@
 // FUNCTION TO FIND AREA OF TRIANGLE WHERE ADJACENT SIDES ARE GIVEN
 float triangle_adj(int *arr1, int *arr2) 
 {
-    int *c = cross(arr1,arr2);
     return 0.5*modVector(cross(arr1,arr2));
 }
 

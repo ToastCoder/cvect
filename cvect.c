@@ -82,8 +82,7 @@ float *unitVector(int *arr)
 // FUNCTION TO FIND UNIT NORMAL
 float **unitNormal(int *x, int *y)
 {
-    int *temp1 = cross(x,y);
-    float *temp = unitVector(temp1);
+    float *temp = unitVector(cross(x,y));
     float **arr=(float **)malloc(sizeof(float *)*2);
     for(int i=0;i<2;i++)
     {
