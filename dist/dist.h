@@ -28,4 +28,7 @@
 // FUNCTION TO THE DISTANCE BETWEEN TWO PARALLEL LINES
 float pl_line(int *a1, int *a2, int *u);
 
+// FUNCTION TO FIND THE DISTANCE BETWEEN TWO SKEW LINES
+float sk_line(int *a1, int *a2, int *u, int *v);
+
 #endif
