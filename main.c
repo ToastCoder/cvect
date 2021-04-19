@@ -135,7 +135,7 @@ void cent_tester(int a1[], int a2[], int a3[], int a4[])
     printf("\n");
 }
 
-void dist_tester(int a1[], int a2[], int a3[], int a4[])
+void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[])
 {
     //PL_LINE 
     float pd = pl_line(a1,a2,a3);
@@ -144,6 +144,10 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[])
     //SK_LINE
     float sd = sk_line(a1,a2,a3,a4);
     printf("Distance between Two Skew Lines : %f\n",sd);
+
+    // PT_PLANE
+    float pt = pt_plane(a1,b1);
+    printf("Distance between point and plane : %f\n",pt);
 }
 
 int main()
@@ -153,10 +157,11 @@ int main()
     int a3[] = {-7,-6,-9};
     int a4[] = {4,20,12};
     int a5[] = {1,0,0};
+    int b1[] = {1,2,3,4};
     
     tester(a1,a2,a3,a4);
     area_tester(a1,a2,a3,a4);
     cent_tester(a1,a2,a3,a4);
-    dist_tester(a1,a2,a3,a4);
+    dist_tester(a1,a2,a3,a4,b1);
     return 0;
 }
