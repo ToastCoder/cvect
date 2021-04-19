@@ -1,14 +1,25 @@
+# MAKEFILE FOR BUILDING CVECT HEADER FILE
+
+# COMMAND FOR COMPILATION ONLY
 compile:
 	gcc cvect.c area/area.c cent/cent.c dist/dist.c main.c -o main -lm
+
+# COMMAND FOR RUNNING THE EXECUTABLE
 run:
 	./main
+
+# COMMAND FOR CLEANING THE EXECUTABLE
 clean:
 	rm main
+
+# COMMAND FOR ONE TIME TESTING OF THE PROGRAM
 execute:
 	gcc cvect.c area/area.c cent/cent.c dist/dist.c main.c -o main -lm
 	./main
 	rm main
-push:
+
+# COMMAND FOR AUTOMATED PUSH
+autopush:
 	git pull
 	git add *
 	git commit -m "Some changes"
