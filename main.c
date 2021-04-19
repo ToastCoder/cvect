@@ -140,6 +140,9 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[])
     //PL_LINE 
     float pd = pl_line(a1,a2,a3);
     printf("Distance between Two Parallel Lines : %f\n",pd);
+
+    float sd = sk_line(a1,a2,a3,a4);
+    printf("Distance between Two Skew Lines : %f\n",sd);
 }
 
 int main()
