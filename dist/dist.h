@@ -31,4 +31,7 @@ float pl_line(int *a1, int *a2, int *u);
 // FUNCTION TO FIND THE DISTANCE BETWEEN TWO SKEW LINES
 float sk_line(int *a1, int *a2, int *u, int *v);
 
+// FUNCTION TO FIND THE DISTANCE BETWEEN A POINT AND A PLANE
+float pt_plane(int *point, int *plane);
+
 #endif
