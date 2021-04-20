@@ -24,3 +24,4 @@ autopush:
 	git add *
 	git commit -m "Some changes"
 	git push
+
