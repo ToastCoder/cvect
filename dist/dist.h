@@ -34,4 +34,7 @@ float sk_line(int *a1, int *a2, int *u, int *v);
 // FUNCTION TO FIND THE DISTANCE BETWEEN A POINT AND A PLANE
 float pt_plane(int *point, int *plane);
 
+// FUNCTION TO FIND THE DISTANCE BETWEEN THE ORIGIN AND A PLANE
+float or_plane(int *plane);
+
 #endif
