@@ -135,7 +135,7 @@ void cent_tester(int a1[], int a2[], int a3[], int a4[])
     printf("\n");
 }
 
-void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[])
+void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[],int b2[])
 {
     //PL_LINE 
     float pd = pl_line(a1,a2,a3);
@@ -152,6 +152,10 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[])
     // OR_PLANE
     float or = or_plane(b1);
     printf("Distance between origin and plane : %f\n",or);
+
+    // PL PLANES
+    float pl = pt_plane(b1,b2);
+    printf("Distance between two parallel planes: %f\n",pl);
 }
 
 int main()
@@ -162,10 +166,12 @@ int main()
     int a4[] = {4,20,12};
     int a5[] = {1,0,0};
     int b1[] = {1,2,3,4};
+    int b2[] = {6,7,8,9};
+
     
     tester(a1,a2,a3,a4);
     area_tester(a1,a2,a3,a4);
     cent_tester(a1,a2,a3,a4);
-    dist_tester(a1,a2,a3,a4,b1);
+    dist_tester(a1,a2,a3,a4,b1,b2);
     return 0;
 }
