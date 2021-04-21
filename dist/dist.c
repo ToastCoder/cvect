@@ -45,3 +45,9 @@ float pt_plane(int *point, int *plane)
     float y = (float)pow((plane[0]*plane[0])+(plane[1]*plane[1])+(plane[2]*plane[2]),0.5);
     return x/y;
 }
+
+// FUNCTION TO FIND THE DISTANCE BETWEEN THE ORIGIN AND A PLANE
+float or_plane(int *plane)
+    {
+        return (float)abs(plane[3]/(pow((plane[0]*plane[0])+(plane[1]*plane[1])+(plane[2]*plane[2]),0.5)));
+    }
