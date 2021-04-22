@@ -25,3 +25,9 @@ int s3(int *x, int *y, int *z)
 {
     return dot(cross(x,y),z);
 }
+
+// FUNCTION TO FIND SCALAR PRODUCT FOR THE GIVEN FOUR VECTORS
+int s4(int *w, int *x, int *y, int *z)
+{
+    return dot(cross(w,x),cross(y,z));
+}
