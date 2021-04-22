@@ -58,3 +58,12 @@ float pl_planes(int *plane1, int *plane2)
         return (float)abs((plane1[3]-plane2[3])/(pow((plane1[0]*plane2[0])+(plane1[1]*plane2[1])+(plane1[2]*plane2[2]),0.5)));
 }
 
+// FUNCTION TO FIND THE DISTANCE BETWEEN TWO VECTORS
+float distance(int *vector1, int *vector2)
+{
+    double v1 = pow(vector2[0]-vector1[0], 2);
+    double v2 = pow(vector2[1]-vector1[1], 2);
+    double v3 = pow(vector2[2]-vector1[2], 2);
+    return (float)sqrt(abs(v1+v2+v3));
+}
+
