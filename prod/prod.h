@@ -18,3 +18,6 @@
 
 // REQUIRED SUBHEADERS
 #include "../cvect.h"
+
+// FUNCTION TO FIND SCALAR TRIPLE PRODUCT FOR THE GIVEN THREE VECTORS
+int s3(int *x, int *y, int *z);
