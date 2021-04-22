@@ -166,16 +166,16 @@ void prod_tester(int a1[], int a2[], int a3[], int a4[])
 {
     // s3
     int s_triple = s3(a1,a2,a3);
-    printf("Scalar Product of 3 vectors: %d\n",s_triple);
+    printf("Scalar Triple Product : %d\n",s_triple);
 
     // s4
     int s_four = s4(a1,a2,a3,a4);
-    printf("Scalar Product of 4 vectors: %d\n",s_four);
+    printf("Scalar Four Product : %d\n",s_four);
 
     // v3
     int *v_triple;
     v_triple = v3(a1,a2,a3);
-    printf("Vector product of 3 vectors: \n");
+    printf("Vector Triple Product : ");
     for (int i=0;i<3;i++)
     {
         printf("%d ",v_triple[i]);
