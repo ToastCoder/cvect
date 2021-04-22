@@ -40,4 +40,7 @@ float or_plane(int *plane);
 // FUNCTION TO FIND THE DISTANCE BETWEEN TWO PARALLEL PLANES
 float pl_planes(int *plane1, int *plane2);
 
+// FUNCTION TO FIND THE DISTANCE BETWEEN TWO VECTORS
+float distance(int *vector1, int *vector2);
+
 #endif
