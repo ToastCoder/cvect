@@ -162,6 +162,13 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[],int b2[])
     printf("Distance between two vectors: %f\n",di);
 }
 
+void prod_tester(int a1[], int a2[], int a3[], int a4[])
+{
+    // s3
+    int s_triple = s3(a1,a2,a3);
+    printf("Scalar Product of 3 vectors: %d\n",s_triple);
+}
+
 int main()
 {
     int a1[] = {10,2,4};
@@ -177,5 +184,6 @@ int main()
     area_tester(a1,a2,a3,a4);
     cent_tester(a1,a2,a3,a4);
     dist_tester(a1,a2,a3,a4,b1,b2);
+    prod_tester(a1,a2,a3,a4);
     return 0;
 }
