@@ -29,7 +29,10 @@ int s3(int *x, int *y, int *z)
 // FUNCTION TO FIND SCALAR PRODUCT FOR THE GIVEN FOUR VECTORS
 int s4(int *w, int *x, int *y, int *z)
 {
-    return dot(cross(w,x),cross(y,z));
+    int c1[3], c2[3];
+    for(int i=0;i<3;i++) c1[i] = cross(w,x)[i];
+    for(int i=0;i<3;i++) c2[i] = cross(y,z)[i];
+    return (dot(c1,c2));
 }
 
 // FUNCTION TO FIND VECTOR TRIPLE PRODUCT FOR THE GIVEN THREE VECTORS
