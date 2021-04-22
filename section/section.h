@@ -12,6 +12,10 @@
 
 // SUB HEADER FILE FOR SECTION FUNCTIONS
 
+// HEADER FILE DEFINITION
+#ifndef SECTION_H
+#define SECTION_H
+
 // REQUIRED LIBRARY FILES
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,3 +27,8 @@
 
 // FUNCTION TO FIND VECTOR USING SECTION FORMULA USING INTERNAL METHOD
 int *internal(int *p1, int *p2, int m, int n);
+
+// FUNCTION TO FIND VECTOR USING SECTION FORMULA USING EXTERNAL METHOD
+int *external(int *p1, int *p2, int m, int n);
+
+#endif

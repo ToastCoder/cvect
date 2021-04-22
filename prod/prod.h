@@ -12,6 +12,10 @@
 
 // SUB HEADER FILE FOR VECTOR PRODUCT FUNCTIONS
 
+// HEADER FILE DEFINITION
+#ifndef PROD_H
+#define PROD_H
+
 // REQUIRED LIBRARY FILES
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,3 +36,5 @@ int *v3(int *x, int *y, int *z);
 
 // FUNCTION TO FIND VECTOR QUADRUPLE PRODUCT FOR THE GIVEN FOUR VECTORS
 int *v4(int *w, int *x, int *y, int *z);
+
+#endif
