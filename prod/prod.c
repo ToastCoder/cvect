@@ -38,5 +38,7 @@ int s4(int *w, int *x, int *y, int *z)
 // FUNCTION TO FIND VECTOR TRIPLE PRODUCT FOR THE GIVEN THREE VECTORS
 int *v3(int *x, int *y, int *z)
 {
-    return cross(cross(x,y),z);
+    int c1[3];
+    for(int i=0;i<3;i++) c1[i] = cross(x,y)[i];
+    return cross(c1,z);
 }
