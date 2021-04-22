@@ -37,7 +37,7 @@ float pt_plane(int *point, int *plane);
 // FUNCTION TO FIND THE DISTANCE BETWEEN THE ORIGIN AND A PLANE
 float or_plane(int *plane);
 
-// FUNCTION TO FIND THE DISTANCE TWO PARALLEL PLANES
+// FUNCTION TO FIND THE DISTANCE BETWEEN TWO PARALLEL PLANES
 float pl_planes(int *plane1, int *plane2);
 
 #endif
