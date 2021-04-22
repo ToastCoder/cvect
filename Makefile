@@ -2,7 +2,7 @@
 
 # COMMAND FOR COMPILATION ONLY
 compile:
-	gcc cvect.c area/area.c cent/cent.c dist/dist.c main.c -o main -lm
+	gcc cvect.c area/area.c cent/cent.c dist/dist.c prod/prod.c main.c -o main -lm
 
 # COMMAND FOR RUNNING THE EXECUTABLE
 run:
