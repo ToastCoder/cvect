@@ -170,7 +170,7 @@ void prod_tester(int a1[], int a2[], int a3[], int a4[])
 
     // s4
     int s_four = s4(a1,a2,a3,a4);
-    printf("Scalar Four Product : %d\n",s_four);
+    printf("Scalar Quadruple Product : %d\n",s_four);
 
     // v3
     int *v_triple;
@@ -179,6 +179,16 @@ void prod_tester(int a1[], int a2[], int a3[], int a4[])
     for (int i=0;i<3;i++)
     {
         printf("%d ",v_triple[i]);
+    }
+    printf("\n");
+
+    //v4
+    int *v_four;
+    v_four = v4(a1,a2,a3,a4);
+    printf("Vector Quadruple Product : ");
+    for (int i=0;i<3;i++)
+    {
+        printf("%d ",v_four[i]);
     }
     printf("\n");
 }
