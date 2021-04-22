@@ -10,7 +10,7 @@
 
 /////////////////////////////////////////////////////
 
-// SUB HEADER FILE FOR CENT FUNCTIONS
+// SUB HEADER FILE FOR CENTROID FUNCTIONS
 
 // HEADER FILE DEFINITION
 #ifndef CENT_H

@@ -10,6 +10,8 @@
 
 /////////////////////////////////////////////////////
 
+// SUB HEADER FILE FOR VECTOR PRODUCT FUNCTIONS
+
 // REQUIRED LIBRARY FILES
 #include <stdio.h>
 #include <stdlib.h>

@@ -10,7 +10,7 @@
 
 /////////////////////////////////////////////////////
 
-// SUB HEADER FILE FOR AREA FUNCTIONS
+// SUB HEADER FILE FOR DISTANCE FUNCTIONS
 
 // HEADER FILE DEFINITION
 #ifndef DIST_H

@@ -10,6 +10,8 @@
 
 /////////////////////////////////////////////////////
 
+// MAIN HEADER FILE FOR THE LIBRARY CVECT
+
 // REQUIRED LIBRARY FILES
 #include <stdio.h>
 #include <stdlib.h>
