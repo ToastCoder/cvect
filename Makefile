@@ -2,7 +2,7 @@
 
 # COMMAND FOR COMPILATION ONLY
 compile:
-	gcc cvect.c area/area.c cent/cent.c dist/dist.c prod/prod.c main.c -o main -lm
+	gcc cvect.c area/area.c cent/cent.c dist/dist.c prod/prod.c section/section.c main.c -o main -lm
 
 # COMMAND FOR RUNNING THE EXECUTABLE
 run:
@@ -14,7 +14,7 @@ clean:
 
 # COMMAND FOR ONE TIME TESTING OF THE PROGRAM
 execute:
-	gcc cvect.c area/area.c cent/cent.c dist/dist.c prod/prod.c main.c -o main -lm
+	gcc cvect.c area/area.c cent/cent.c dist/dist.c prod/prod.c section/section.c main.c -o main -lm
 	./main
 	rm main
 

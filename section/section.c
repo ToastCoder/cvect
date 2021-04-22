@@ -21,3 +21,14 @@
 // REQUIRED SUBHEADERS
 #include "section.h"
 #include "../cvect.h"
+
+// FUNCTION TO FIND VECTOR USING SECTION FORMULA USING INTERNAL METHOD
+int *internal(int *p1, int *p2, int m, int n)
+{
+    static int arr[3];
+    for(int i=0;i<3;i++)
+    {
+        arr[i] = ((m*p1[i])-(n*p2[i]))/(m-n);
+    }
+    return arr;
+}
