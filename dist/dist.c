@@ -19,7 +19,6 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-#include "dist.h"
 #include "../cvect.h"
 
 // FUNCTION TO THE DISTANCE BETWEEN TWO PARALLEL LINES
