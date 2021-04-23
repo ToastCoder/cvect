@@ -28,6 +28,7 @@
 #include "dist/dist.h"
 #include "prod/prod.h"
 #include "section/section.h"
+#include "volume/volume.h"
 
 // FUNCTION TO CALCULATE THE DOT PRODUCT
 int dot(int *x, int *y);
