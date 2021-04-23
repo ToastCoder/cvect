@@ -19,7 +19,6 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-#include "section.h"
 #include "../cvect.h"
 
 // FUNCTION TO FIND VECTOR USING SECTION FORMULA USING INTERNAL METHOD
