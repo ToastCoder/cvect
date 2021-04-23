@@ -19,7 +19,6 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-#include "cent.h"
 #include "../cvect.h"
 
 //FUNCTION TO FIND CENTROID IOF A TRIANGLE
