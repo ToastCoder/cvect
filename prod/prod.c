@@ -19,7 +19,6 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-#include "prod.h"
 #include "../cvect.h"
 
 // FUNCTION TO FIND SCALAR TRIPLE PRODUCT FOR THE GIVEN THREE VECTORS
