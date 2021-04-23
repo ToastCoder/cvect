@@ -218,9 +218,9 @@ void section_tester(int a1[],int a2[],int u,int v)
 
 void volume_tester(int a1[],int a2[], int a3[])
 {
-    float pa;
+    int pa;
     pa = parellopiped(a1,a2,a3);
-    printf("Volume of parallelopiped : %f\n",pa);
+    printf("Volume of parallelopiped : %d\n",pa);
 }
 
 int main()
