@@ -19,7 +19,6 @@
 #include <stdbool.h>
 
 // REQUIRED SUBHEADERS
-#include "area.h"
 #include "../cvect.h"
 
 // FUNCTION TO FIND AREA OF TRIANGLE WHERE ADJACENT SIDES ARE GIVEN
