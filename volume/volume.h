@@ -26,4 +26,7 @@
 #include "../cvect.h"
 #include "../section/section.h"
 
+//FUNCTION TO FIND THE VOLUME OF PARALLELOPIPED
+float parellopiped(int *x, int *y, int *z);
+
 #endif
