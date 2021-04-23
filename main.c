@@ -215,6 +215,14 @@ void section_tester(int a1[],int a2[],int u,int v)
     }
     printf("\n");
 }
+
+void volume_tester(int a1[],int a2[], int a3[])
+{
+    float pa;
+    pa = parellopiped(a1,a2,a3);
+    printf("Volume of parallelopiped : %f\n",pa);
+}
+
 int main()
 {
     int a1[] = {10,2,4};
@@ -233,5 +241,6 @@ int main()
     dist_tester(a1,a2,a3,a4,b1,b2);
     prod_tester(a1,a2,a3,a4);
     section_tester(a1,a2,u,v);
+    volume_tester(a1,a2,a3);
     return 0;
 }
