@@ -196,22 +196,22 @@ void prod_tester(int a1[], int a2[], int a3[], int a4[])
 void section_tester(int a1[],int a2[],int u,int v)
 {
     //internal
-    int *inter;
+    float *inter;
     inter = internal(a1,a2,u,v);
     printf("Vector Section (Internal) : ");
     for (int i=0;i<3;i++)
     {
-        printf("%d ",inter[i]);
+        printf("%f ",inter[i]);
     }
     printf("\n");
 
      //external
-    int *exter;
+    float *exter;
     exter = external(a1,a2,u,v);
     printf("Vector Section (External) : ");
     for (int i=0;i<3;i++)
     {
-        printf("%d ",exter[i]);
+        printf("%f ",exter[i]);
     }
     printf("\n");
 }
@@ -232,8 +232,8 @@ int main()
     int a5[] = {1,0,0};
     int b1[] = {1,2,3,4};
     int b2[] = {6,7,8,9};
-    int u = 3;
-    int v = 2;
+    int u = 15;
+    int v = 11;
     
     tester(a1,a2,a3,a4);
     area_tester(a1,a2,a3,a4);

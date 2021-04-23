@@ -26,9 +26,9 @@
 #include "../cvect.h"
 
 // FUNCTION TO FIND VECTOR USING SECTION FORMULA USING INTERNAL METHOD
-int *internal(int *p1, int *p2, int m, int n);
+float *internal(int *p1, int *p2, int m, int n);
 
 // FUNCTION TO FIND VECTOR USING SECTION FORMULA USING EXTERNAL METHOD
-int *external(int *p1, int *p2, int m, int n);
+float *external(int *p1, int *p2, int m, int n);
 
 #endif
