@@ -73,9 +73,8 @@ float pl_planes(int *plane1, int *plane2)
 // FUNCTION TO FIND THE DISTANCE BETWEEN TWO VECTORS
 float distance(int *vector1, int *vector2)
 {
-    double v1 = pow(vector2[0]-vector1[0], 2);
-    double v2 = pow(vector2[1]-vector1[1], 2);
-    double v3 = pow(vector2[2]-vector1[2], 2);
-    return (float)sqrt(abs(v1+v2+v3));
+    int sum = 0;
+    for(int i=0;i<3;i++) sum += pow(vector2[i]-vector1[i], 2);
+    return (float)sqrt(sum);
 }
 
