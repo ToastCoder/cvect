@@ -56,7 +56,18 @@ float or_plane(int *plane)
 // FUNCTION TO FIND THE DISTANCE BETWEEN TWO PARALLEL PLANES
 float pl_planes(int *plane1, int *plane2)
 {
-        return (float)abs((plane1[3]-plane2[3])/(pow((plane1[0]*plane2[0])+(plane1[1]*plane2[1])+(plane1[2]*plane2[2]),0.5)));
+    if (plane1[0]%plane2[0] == 0)
+    {
+        int x = plane1[0]/plane2[0];
+        for (int i=0;i<4;i++) plane2[i] *= x;
+    }
+    else if (plane2[0]%plane1[0] == 0)
+    {
+        int x = plane2[0]/plane1[0];
+        for (int i=0;i<4;i++) plane1[i] *= x;
+    }
+        
+    return (float)abs(plane2[3]-plane1[3])/(pow((plane1[0]*plane2[0])+(plane1[1]*plane2[1])+(plane1[2]*plane2[2]),0.5));
 }
 
 // FUNCTION TO FIND THE DISTANCE BETWEEN TWO VECTORS
