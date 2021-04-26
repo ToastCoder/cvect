@@ -154,7 +154,7 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[],int b2[])
     printf("Distance between origin and plane : %f\n",or);
 
     // PL PLANES
-    float pl = pt_plane(b1,b2);
+    float pl = pl_planes(b2,b1);
     printf("Distance between two parallel planes: %f\n",pl);
 
     //DISTANCE
@@ -230,8 +230,8 @@ int main()
     int a3[] = {-7,-6,-9};
     int a4[] = {4,20,12};
     int a5[] = {1,0,0};
-    int b1[] = {1,2,3,4};
-    int b2[] = {6,7,8,9};
+    int b1[] = {1,2,-2,9};
+    int b2[] = {2,4,-4,-6};
     int u = 15;
     int v = 11;
     
