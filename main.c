@@ -219,7 +219,7 @@ void section_tester(int a1[],int a2[],int u,int v)
 void volume_tester(int a1[],int a2[], int a3[])
 {
     int pa;
-    pa = parellopiped(a1,a2,a3);
+    pa = parallopiped(a1,a2,a3);
     printf("Volume of parallelopiped : %d\n",pa);
 }
 

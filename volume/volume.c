@@ -22,7 +22,7 @@
 #include "../cvect.h"
 
 //FUNCTION TO FIND THE VOLUME OF PARALLELOPIPED
-int parellopiped(int *x, int *y, int *z)
+int parallopiped(int *x, int *y, int *z)
 {
     return abs(s3(x,y,z));
 }
