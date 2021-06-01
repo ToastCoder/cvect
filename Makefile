@@ -1,7 +1,7 @@
 # MAKEFILE FOR BUILDING CVECT HEADER FILE
 
-# COMMAND FOR COMPILATION ONLY
-compile:
+# COMMAND FOR COMPILATION ONLY USING C
+compile_c:
 	gcc cvect.c area/area.c cent/cent.c dist/dist.c prod/prod.c section/section.c volume/volume.c main.c -o main -lm
 
 # COMMAND FOR RUNNING THE EXECUTABLE
@@ -13,7 +13,7 @@ clean:
 	rm main
 
 # COMMAND FOR ONE TIME TESTING OF THE PROGRAM
-execute:
+execute_c:
 	gcc cvect.c area/area.c cent/cent.c dist/dist.c prod/prod.c section/section.c volume/volume.c main.c -o main -lm
 	./main
 	rm main
