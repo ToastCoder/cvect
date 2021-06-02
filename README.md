@@ -18,14 +18,16 @@ View the python version [here](https://github.com/ToastCoder/pyvect/)
 1. Download the repository
 2. Copy the files inside of src folder to the required destination folder.
 3. Make sure the following files and directories exist.
-    * /area
-    * /cent
-    * /dist
-    * /prod
-    * /section
-    * /volume
-    * cvect.h
-    * cvect.c
+```
+    /area
+    /cent
+    /dist
+    /prod
+    /section
+    /volume
+    cvect.h
+    cvect.c
+``` 
 4. #### For C: 
     One can directly use import the cvect library and all of its sub-libraries in the following way 
     ```c
