@@ -4,7 +4,7 @@
 #include <stdlib.h>
 extern "C"
 {
-    #include "cvect.h"
+    #include "src/cvect.h"
 }
 
 using namespace std;
