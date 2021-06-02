@@ -34,7 +34,7 @@ View the python version [here](https://github.com/ToastCoder/pyvect/)
     #include "cvect.h"
     ``` 
    #### For C++:
-   One can import the cvect library and all of its sub-libraries using *extern* in the following way 
+   One can import the cvect library and all of its sub-libraries using **extern** in the following way 
    ```cpp
    extern "C"
    {
