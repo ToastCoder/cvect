@@ -19,6 +19,15 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     printf("Cross Product : ");
     for(int i=0;i<3;i++) printf("%d ",c[i]);
     printf("\n");
+
+    // MODVECTOR TESTER
+    printf("Modulus of vector : %f\n",modVector(a3));
+
+    // ANGLE TESTER
+    printf("Angle : %f\n",angle(a1,a2));
+
+    // PRPJECTION TESTER
+    printf("Projection : %f\n",projection(a2,a3));
 }
 
 int main()
