@@ -1,4 +1,13 @@
 main
+cvect.o
+area.o
+cent.o
+dist.o
+prod.o
+section.o
+volume.o
+main_cpp.o
+main.o
 main.exe
 a
 .vscode
