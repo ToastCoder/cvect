@@ -1,8 +1,20 @@
 # MAKEFILE FOR BUILDING CVECT HEADER FILE
 
-# COMMAND FOR COMPILATION ONLY USING C
+# COMMAND FOR COMPILATION USING C
 compile_c:
 	gcc cvect.c area/area.c cent/cent.c dist/dist.c prod/prod.c section/section.c volume/volume.c main.c -o main -lm
+
+# COMMAND FOR COMPILATION USING C++
+compile_cpp:
+	gcc -c -o cvect.o cvect.c -lm
+	gcc -c -o area.o area/area.c -lm
+	gcc -c -o cent.o cent/cent.c -lm
+	gcc -c -o dist.o dist/dist.c -lm
+	gcc -c -o prod.o prod/prod.c -lm
+	gcc -c -o section.o section/section.c -lm
+	gcc -c -o volume.o volume/volume.c -lm
+	g++ -c -o main_cpp.o main.cpp -lm
+	g++ -o main cvect.o area.o cent.o dist.o prod.o section.o volume.o main_cpp.o -lm
 
 # COMMAND FOR RUNNING THE EXECUTABLE
 run:
