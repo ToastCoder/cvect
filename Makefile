@@ -23,6 +23,16 @@ run:
 # COMMAND FOR CLEANING THE EXECUTABLE
 clean:
 	rm main
+	rm cvect.o
+	rm area.o
+	rm cent.o
+	rm dist.o
+	rm prod.o
+	rm section.o
+	rm volume.o
+	rm main_cpp.o
+	rm main.o
+	rm main.exe
 
 # COMMAND FOR ONE TIME TESTING OF THE PROGRAM
 execute_c:
