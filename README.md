@@ -1,7 +1,7 @@
 # cvect
 
-Cvect is a C version of pyvect python module created for the purpose of simplifying the vector calculations such as finding the angle between vectors, projection of one vector over the other and much more...!
-
+Cvect is a C version of pyvect python module which is created for the purpose of simplifying most of the popular vector algebra calculations from basic angle between vectors, projection of one vector over the other to some higher vector calculations like finding the area, distance, volume and centroid of various popular vector shapes and much more. 
+Works with both C and C++. 
 View the python version [here](https://github.com/ToastCoder/pyvect/)
 
 ### Developed by: 
