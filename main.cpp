@@ -2,8 +2,10 @@
 #include <stdbool.h>
 #include <math.h>
 #include <stdlib.h>
-
-#include "cvect.h"
+extern "C"
+{
+    #include "cvect.h"
+}
 
 using namespace std;
 
