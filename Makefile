@@ -2,17 +2,17 @@
 
 # COMMAND FOR COMPILATION USING C
 compile_c:
-	gcc cvect.c area/area.c cent/cent.c dist/dist.c prod/prod.c section/section.c volume/volume.c main.c -o main -lm
+	gcc src/cvect.c src/area/area.c src/cent/cent.c src/dist/dist.c src/prod/prod.c src/section/section.c src/volume/volume.c main.c -o main -lm
 
 # COMMAND FOR COMPILATION USING C++
 compile_cpp:
-	gcc -c -o cvect.o cvect.c -lm
-	gcc -c -o area.o area/area.c -lm
-	gcc -c -o cent.o cent/cent.c -lm
-	gcc -c -o dist.o dist/dist.c -lm
-	gcc -c -o prod.o prod/prod.c -lm
-	gcc -c -o section.o section/section.c -lm
-	gcc -c -o volume.o volume/volume.c -lm
+	gcc -c -o cvect.o src/cvect.c -lm
+	gcc -c -o area.o src/area/area.c -lm
+	gcc -c -o cent.o src/cent/cent.c -lm
+	gcc -c -o dist.o src/dist/dist.c -lm
+	gcc -c -o prod.o src/prod/prod.c -lm
+	gcc -c -o section.o src/section/section.c -lm
+	gcc -c -o volume.o src/volume/volume.c -lm
 	g++ -c -o main_cpp.o main.cpp -lm
 	g++ -o main cvect.o area.o cent.o dist.o prod.o section.o volume.o main_cpp.o -lm
 
@@ -34,21 +34,21 @@ clean:
 	rm main.o
 	rm main.exe
 
-# COMMAND FOR ONE TIME TESTING OF THE PROGRAM IN CPP
+# COMMAND FOR ONE TIME TESTING OF THE PROGRAM IN C
 execute_c:
-	gcc cvect.c area/area.c cent/cent.c dist/dist.c prod/prod.c section/section.c volume/volume.c main.c -o main -lm
+	gcc src/cvect.c src/area/area.c src/cent/cent.c src/dist/dist.c src/prod/prod.c src/section/section.c src/volume/volume.c main.c -o main -lm
 	./main
 	rm main
 
-# COMMAND FOR ONE TIME TESTING OF THE PROGRAM IN CPP
+# COMMAND FOR ONE TIME TESTING OF THE PROGRAM IN C++
 execute_cpp:
-	gcc -c -o cvect.o cvect.c -lm
-	gcc -c -o area.o area/area.c -lm
-	gcc -c -o cent.o cent/cent.c -lm
-	gcc -c -o dist.o dist/dist.c -lm
-	gcc -c -o prod.o prod/prod.c -lm
-	gcc -c -o section.o section/section.c -lm
-	gcc -c -o volume.o volume/volume.c -lm
+	gcc -c -o cvect.o src/cvect.c -lm
+	gcc -c -o area.o src/area/area.c -lm
+	gcc -c -o cent.o src/cent/cent.c -lm
+	gcc -c -o dist.o src/dist/dist.c -lm
+	gcc -c -o prod.o src/prod/prod.c -lm
+	gcc -c -o section.o src/section/section.c -lm
+	gcc -c -o volume.o src/volume/volume.c -lm
 	g++ -c -o main_cpp.o main.cpp -lm
 	g++ -o main cvect.o area.o cent.o dist.o prod.o section.o volume.o main_cpp.o -lm
 	./main
@@ -63,7 +63,7 @@ execute_cpp:
 	rm main_cpp.o
 	rm main.o
 	rm main.exe
-	
+
 # COMMAND FOR AUTOMATED PUSH
 autopush:
 	git pull
