@@ -11,6 +11,7 @@ View the python version [here](https://github.com/ToastCoder/pyvect/)
 ### Tested configuration:
 * Pop OS 20.10 
 * gcc 10.2.0 
+* g++ 10.2.0
 * GNU Make 4.3 
 
 ## License:
