@@ -31,6 +31,9 @@ void tester(int a1[],int a2[], int a3[], int a4[])
 
      //ISPERPENDICULAR TESTER
     printf("IsPerpendicular : %d\n",isPerpendicular(a2,a4));
+
+    // ISCOLLINEAR TESTER
+    printf("IsCollinear : %d\n",isCollinear(a2,a3));
 }
 
 int main()
