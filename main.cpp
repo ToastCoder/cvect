@@ -40,6 +40,19 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     printf("Unit Vector : ");
     for(int i=0;i<3;i++) printf("%f ",res[i]);
     printf("\n");
+
+    //UNITNORMAL TESTER
+    float **arr;
+    arr = unitNormal(a2,a3);
+    printf("Unit Normal : \n");
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            printf("%f ",arr[i][j]);
+        }
+        printf("\n");
+    }
 }
 
 int main()
