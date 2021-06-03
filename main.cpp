@@ -92,6 +92,9 @@ void tester(int a1[],int a2[], int a3[], int a4[])
 
      // MINVALUE TESTER
     printf("minValue : %f\n",minValue(a1,a2));
+
+    // MAXVALUE TESTER
+    printf("maxValue : %f\n",maxValue(a1,a2));
 }
 
 int main()
