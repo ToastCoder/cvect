@@ -76,6 +76,19 @@ void tester(int a1[],int a2[], int a3[], int a4[])
 
     // ISCOPLANAR TESTER
     printf("IsCoplanar : %d\n",isCoplanar(a1,a2,a3));
+
+    //RECIPROCAL TESTER
+    float **rec;
+    rec = reciprocal(a1,a2,a3);
+    printf("Reciprocal : \n");
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            printf("%f ",rec[i][j]);
+        }
+        printf("\n");
+    }
 }
 
 int main()
