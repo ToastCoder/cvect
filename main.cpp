@@ -96,6 +96,10 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     // MAXVALUE TESTER
     printf("maxValue : %f\n",maxValue(a1,a2));
 }
+void area_tester(int a1[],int a2[],int a3[],int a4[])
+{
+
+}
 
 int main()
 {
@@ -110,5 +114,6 @@ int main()
     int v = 11;
     
     tester(a1,a2,a3,a4);
+    area_tester(a1,a2,a3,a4);
     return 0;
 }
