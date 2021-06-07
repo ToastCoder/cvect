@@ -98,7 +98,8 @@ void tester(int a1[],int a2[], int a3[], int a4[])
 }
 void area_tester(int a1[],int a2[],int a3[],int a4[])
 {
-
+    // TRIANGLE ADJ TESTER
+    printf("Triangle Adj Area : %f\n",triangle_adj(a1,a2));
 }
 
 int main()
