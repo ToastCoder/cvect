@@ -103,6 +103,9 @@ void area_tester(int a1[],int a2[],int a3[],int a4[])
 
     // TRIANGLE POS TESTER
     printf("Triangle Pos Area : %f\n",triangle_pos(a1,a2,a3));
+
+    // QUADRILATERAL AREA TESTER
+    printf("Quadrilateral Area : %f\n",quad(a1,a2));
 }
 
 int main()
