@@ -109,6 +109,9 @@ void area_tester(int a1[],int a2[],int a3[],int a4[])
 
      // PARALLELOGRAM AREA TESTER
     printf("Parallelogram Area : %f\n",parallelogram(a1,a2));
+
+    // TETRAHEDRON AREA TESTER
+    printf("Tetrahedron Area : %f\n",tetrahedron(a1,a2,a3));
 }
 
 int main()
