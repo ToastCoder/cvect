@@ -106,6 +106,9 @@ void area_tester(int a1[],int a2[],int a3[],int a4[])
 
     // QUADRILATERAL AREA TESTER
     printf("Quadrilateral Area : %f\n",quad(a1,a2));
+
+     // PARALLELOGRAM AREA TESTER
+    printf("Parallelogram Area : %f\n",parallelogram(a1,a2));
 }
 
 int main()
