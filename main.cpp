@@ -137,6 +137,13 @@ void cent_tester(int a1[], int a2[], int a3[], int a4[])
     printf("\n");
 }
 
+void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[],int b2[])
+{
+    //PL_LINE 
+    float pd = pl_line(a1,a2,a3);
+    printf("Distance between Two Parallel Lines : %f\n",pd);
+}
+
 int main()
 {
     int a1[] = {10,2,4};
@@ -152,5 +159,6 @@ int main()
     tester(a1,a2,a3,a4);
     area_tester(a1,a2,a3,a4);
     cent_tester(a1,a2,a3,a4);
+    dist_tester(a1,a2,a3,a4,b1,b2);
     return 0;
 }
