@@ -114,6 +114,19 @@ void area_tester(int a1[],int a2[],int a3[],int a4[])
     printf("Tetrahedron Area : %f\n",tetrahedron(a1,a2,a3));
 }
 
+void cent_tester(int a1[], int a2[], int a3[], int a4[])
+{
+    //TRIANGLE TESTER
+    float *tr;
+    tr = triangle_cent(a1,a2,a3);
+    printf("Centroid (Triangle) : \n");
+    for (int i=0;i<3;i++)
+    {
+        printf("%f ",tr[i]);
+    }
+    printf("\n");
+}
+
 int main()
 {
     int a1[] = {10,2,4};
@@ -128,5 +141,6 @@ int main()
     
     tester(a1,a2,a3,a4);
     area_tester(a1,a2,a3,a4);
+    cent_tester(a1,a2,a3,a4);
     return 0;
 }
