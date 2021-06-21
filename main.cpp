@@ -150,6 +150,10 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[],int b2[])
     // PT_PLANE
     float pt = pt_plane(a1,b1);
     printf("Distance between point and plane : %f\n",pt);
+
+    // OR_PLANE
+    float o = or_plane(b1);
+    printf("Distance between origin and plane : %f\n",o);
 }
 
 int main()
