@@ -159,6 +159,9 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[],int b2[])
     float pl = pl_planes(b2,b1);
     printf("Distance between two parallel planes: %f\n",pl);
 
+    //DISTANCE
+    float di = distance(a1,a2);
+    printf("Distance between two vectors: %f\n",di);
     
 }
 
