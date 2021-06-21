@@ -146,6 +146,10 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[],int b2[])
     //SK_LINE
     float sd = sk_line(a1,a2,a3,a4);
     printf("Distance between Two Skew Lines : %f\n",sd);
+
+    // PT_PLANE
+    float pt = pt_plane(a1,b1);
+    printf("Distance between point and plane : %f\n",pt);
 }
 
 int main()
