@@ -154,6 +154,12 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[],int b2[])
     // OR_PLANE
     float o = or_plane(b1);
     printf("Distance between origin and plane : %f\n",o);
+
+    // PL PLANES
+    float pl = pl_planes(b2,b1);
+    printf("Distance between two parallel planes: %f\n",pl);
+
+    
 }
 
 int main()
