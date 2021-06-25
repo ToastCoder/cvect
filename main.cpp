@@ -207,6 +207,16 @@ void section_tester(int a1[],int a2[],int u,int v)
         printf("%f ",inter[i]);
     }
     printf("\n");
+
+    //external
+    float *exter;
+    exter = external(a1,a2,u,v);
+    printf("Vector Section (External) : ");
+    for (int i=0;i<3;i++)
+    {
+        printf("%f ",exter[i]);
+    }
+    printf("\n");
 }
 
 int main()
