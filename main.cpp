@@ -171,6 +171,10 @@ void prod_tester(int a1[], int a2[], int a3[], int a4[])
     int s_triple = s3(a1,a2,a3);
     printf("Scalar Triple Product : %d\n",s_triple);
 
+    // s4
+    int s_four = s4(a1,a2,a3,a4);
+    printf("Scalar Quadruple Product : %d\n",s_four);
+
 }
 
 int main()
