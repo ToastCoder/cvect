@@ -1,3 +1,14 @@
+// CVECT
+//
+// DEVELOPED BY: VIGNESHWAR K R, MOULISHANKAR M R
+//
+// CVECT IS THE C VERSION OF PYTHON MODULE PYVECT WHICH IS USED FOR CALCULATING VARIOUS VECTOR ALGEBRA OPERATIONS.
+//
+// FILE NAME: MAIN.CPP
+//
+// -------------------------------------------------------------------------
+
+// IMPORTING REQUIRED HEADERS
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
