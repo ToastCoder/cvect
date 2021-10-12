@@ -31,7 +31,7 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     printf("IsCollinear : %d\n",isCollinear(a2,a3));
 
     // UNIT VECTOR TESTER
-    float *res = unitVector(a3);
+    float *res = unitVector(a1);
     printf("Unit Vector : ");
     for(int i=0;i<3;i++) printf("%f ",res[i]);
     printf("\n");
