@@ -34,7 +34,7 @@ int *cross(int *x, int *y)
 {
     static int cross_product[3];
     cross_product[0] = x[1]*y[2] - x[2]*y[1];
-    cross_product[1] = (x[0]*y[2] - x[2]*y[0])*-1;
+    cross_product[1] = -(x[0]*y[2] - x[2]*y[0]);
     cross_product[2] = x[0]*y[1] - x[1]*y[0];
     return cross_product;
 }
@@ -58,9 +58,9 @@ float projection(int *x, int *y)
 }
 
 // FUNCTION TO FIND IF TWO VECTORS ARE PREPENDICULAR
-bool isPerpendicular(int *x, int *y)
+int isPerpendicular(int *x, int *y)
 {
-    bool res = (dot(x,y) == 0)?true:false;
+    int res = (dot(x,y) == 0)?1:0;
     return res;
 }
 
@@ -102,10 +102,8 @@ float **unitNormal(int *x, int *y)
 float *bisector(int *x, int *y)
 {
     static float bsect[3];
-    float *unit_a = unitVector(x);
-    float *unit_b = unitVector(y);
     for (int i=0;i<3;i++)
-        bsect[i] = unit_a[i]+unit_b[i];
+        bsect[i] = unitVector(x)[i] + unitVector(y)[i];
     return bsect;
 }
 

@@ -46,7 +46,7 @@ float angle(int *x,int *y);
 float projection(int *x, int *y);
 
 // FUNCTION TO FIND IF TWO VECTORS ARE PREPENDICULAR
-bool isPerpendicular(int *x, int *y);
+int isPerpendicular(int *x, int *y);
 
 // FUNCTION TO FIND IF TWO VECTORS ARE COLLINEAR
 bool isCollinear(int *x,int *y);
