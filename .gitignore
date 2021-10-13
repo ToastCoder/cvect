@@ -10,3 +10,4 @@ main_cpp.o
 main.o
 main.exe
 .vscode
+*.swp
