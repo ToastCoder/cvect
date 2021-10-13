@@ -15,7 +15,7 @@
 #include <stdlib.h>
 extern "C"
 {
-    #include "src/cvect.h"
+    #include "../src/cvect.h"
 }
 
 using namespace std;
