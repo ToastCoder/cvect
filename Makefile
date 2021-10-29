@@ -50,7 +50,7 @@ execute_cpp:
 	$(CPPC) -c -o main_cpp.o $(CPP_TESTER) -lm
 	$(CPPC) -o main $(BIN_FILES) main_cpp.o -lm
 	./main
-	rm main $(BIN_FILES) main.o main_cpp.o main.exe
+	rm main $(BIN_FILES) main.o main_cpp.o
 
 # COMMAND FOR AUTOMATED PUSH
 autopush:
