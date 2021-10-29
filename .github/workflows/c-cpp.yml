@@ -17,5 +17,3 @@ jobs:
       run: make execute_c
     - name: execute_cpp
       run: make execute_cpp
-    - name: make clean
-      run: make clean
