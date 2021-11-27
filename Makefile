@@ -1,68 +1,56 @@
 # MAKEFILE FOR BUILDING CVECT HEADER FILE
 
+# VARIABLES 
+CC = gcc
+CPPC = g++
+SRC_FILES = src/cvect.c src/area/area.c src/cent/cent.c src/dist/dist.c src/prod/prod.c src/section/section.c src/volume/volume.c
+BIN_FILES = cvect.o area.o cent.o dist.o prod.o section.o volume.o
+C_TESTER = test/main.c
+CPP_TESTER = test/main.cpp
+
 # COMMAND FOR COMPILATION USING C
 compile_c:
-	gcc src/cvect.c src/area/area.c src/cent/cent.c src/dist/dist.c src/prod/prod.c src/section/section.c src/volume/volume.c main.c -o main -lm
+	$(CC) $(SRC_FILES) $(C_TESTER) -o main -lm
 
 # COMMAND FOR COMPILATION USING C++
 compile_cpp:
-	gcc -c -o cvect.o src/cvect.c -lm
-	gcc -c -o area.o src/area/area.c -lm
-	gcc -c -o cent.o src/cent/cent.c -lm
-	gcc -c -o dist.o src/dist/dist.c -lm
-	gcc -c -o prod.o src/prod/prod.c -lm
-	gcc -c -o section.o src/section/section.c -lm
-	gcc -c -o volume.o src/volume/volume.c -lm
-	g++ -c -o main_cpp.o main.cpp -lm
-	g++ -o main cvect.o area.o cent.o dist.o prod.o section.o volume.o main_cpp.o -lm
+	$(CC) -c -o cvect.o src/cvect.c -lm
+	$(CC) -c -o area.o src/area/area.c -lm
+	$(CC) -c -o cent.o src/cent/cent.c -lm
+	$(CC) -c -o dist.o src/dist/dist.c -lm
+	$(CC) -c -o prod.o src/prod/prod.c -lm
+	$(CC) -c -o section.o src/section/section.c -lm
+	$(CC) -c -o volume.o src/volume/volume.c -lm
+	$(CPPC) -c -o main_cpp.o $(CPP_TESTER) -lm
+	$(CPPC) -o main $(BIN_FILES) main_cpp.o -lm
 
-# COMMAND FOR RUNNING THE EXECUTABLE
+# COMMAND FOR RUNNING THE BINARY
 run:
 	./main
 
-# COMMAND FOR CLEANING THE EXECUTABLE
+# COMMAND FOR CLEANING THE BINARY
 clean:
-	rm main
-	rm cvect.o
-	rm area.o
-	rm cent.o
-	rm dist.o
-	rm prod.o
-	rm section.o
-	rm volume.o
-	rm main_cpp.o
-	rm main.o
-	rm main.exe
+	rm main $(BIN_FILES) main.o main_cpp.o main.exe
 
 # COMMAND FOR ONE TIME TESTING OF THE PROGRAM IN C
 execute_c:
-	gcc src/cvect.c src/area/area.c src/cent/cent.c src/dist/dist.c src/prod/prod.c src/section/section.c src/volume/volume.c main.c -o main -lm
+	$(CC) $(SRC_FILES) $(C_TESTER) -o main -lm
 	./main
 	rm main
 
 # COMMAND FOR ONE TIME TESTING OF THE PROGRAM IN C++
 execute_cpp:
-	gcc -c -o cvect.o src/cvect.c -lm
-	gcc -c -o area.o src/area/area.c -lm
-	gcc -c -o cent.o src/cent/cent.c -lm
-	gcc -c -o dist.o src/dist/dist.c -lm
-	gcc -c -o prod.o src/prod/prod.c -lm
-	gcc -c -o section.o src/section/section.c -lm
-	gcc -c -o volume.o src/volume/volume.c -lm
-	g++ -c -o main_cpp.o main.cpp -lm
-	g++ -o main cvect.o area.o cent.o dist.o prod.o section.o volume.o main_cpp.o -lm
+	$(CC) -c -o cvect.o src/cvect.c -lm
+	$(CC) -c -o area.o src/area/area.c -lm
+	$(CC) -c -o cent.o src/cent/cent.c -lm
+	$(CC) -c -o dist.o src/dist/dist.c -lm
+	$(CC) -c -o prod.o src/prod/prod.c -lm
+	$(CC) -c -o section.o src/section/section.c -lm
+	$(CC) -c -o volume.o src/volume/volume.c -lm
+	$(CPPC) -c -o main_cpp.o $(CPP_TESTER) -lm
+	$(CPPC) -o main $(BIN_FILES) main_cpp.o -lm
 	./main
-	rm main
-	rm cvect.o
-	rm area.o
-	rm cent.o
-	rm dist.o
-	rm prod.o
-	rm section.o
-	rm volume.o
-	rm main_cpp.o
-	rm main.o
-	rm main.exe
+	rm main $(BIN_FILES) main_cpp.o
 
 # COMMAND FOR AUTOMATED PUSH
 autopush:

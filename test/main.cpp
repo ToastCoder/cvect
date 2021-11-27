@@ -1,9 +1,25 @@
+// CVECT
+//
+// DEVELOPED BY: VIGNESHWAR K R, MOULISHANKAR M R
+//
+// CVECT IS THE C VERSION OF PYTHON MODULE PYVECT WHICH IS USED FOR CALCULATING VARIOUS VECTOR ALGEBRA OPERATIONS.
+//
+// FILE NAME: MAIN.CPP
+//
+// -------------------------------------------------------------------------
+
+// IMPORTING REQUIRED HEADERS
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
 #include <stdlib.h>
+extern "C"
+{
+    #include "../src/cvect.h"
+}
 
-#include "src/cvect.h"
+using namespace std;
+
 void tester(int a1[],int a2[], int a3[], int a4[])
 {
     // DOT TESTER
@@ -24,14 +40,14 @@ void tester(int a1[],int a2[], int a3[], int a4[])
     // PRPJECTION TESTER
     printf("Projection : %f\n",projection(a2,a3));
 
-    //ISPERPENDICULAR TESTER
+     //ISPERPENDICULAR TESTER
     printf("IsPerpendicular : %d\n",isPerpendicular(a2,a4));
 
     // ISCOLLINEAR TESTER
     printf("IsCollinear : %d\n",isCollinear(a2,a3));
 
     // UNIT VECTOR TESTER
-    float *res = unitVector(a1);
+    float *res = unitVector(a3);
     printf("Unit Vector : ");
     for(int i=0;i<3;i++) printf("%f ",res[i]);
     printf("\n");
@@ -85,13 +101,12 @@ void tester(int a1[],int a2[], int a3[], int a4[])
         printf("\n");
     }
 
-    // MINVALUE TESTER
+     // MINVALUE TESTER
     printf("minValue : %f\n",minValue(a1,a2));
 
     // MAXVALUE TESTER
     printf("maxValue : %f\n",maxValue(a1,a2));
 }
-
 void area_tester(int a1[],int a2[],int a3[],int a4[])
 {
     // TRIANGLE ADJ TESTER
@@ -103,14 +118,12 @@ void area_tester(int a1[],int a2[],int a3[],int a4[])
     // QUADRILATERAL AREA TESTER
     printf("Quadrilateral Area : %f\n",quad(a1,a2));
 
-    // PARALLELOGRAM AREA TESTER
+     // PARALLELOGRAM AREA TESTER
     printf("Parallelogram Area : %f\n",parallelogram(a1,a2));
 
     // TETRAHEDRON AREA TESTER
     printf("Tetrahedron Area : %f\n",tetrahedron(a1,a2,a3));
-
 }
-
 
 void cent_tester(int a1[], int a2[], int a3[], int a4[])
 {
@@ -140,7 +153,7 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[],int b2[])
     //PL_LINE 
     float pd = pl_line(a1,a2,a3);
     printf("Distance between Two Parallel Lines : %f\n",pd);
-    
+
     //SK_LINE
     float sd = sk_line(a1,a2,a3,a4);
     printf("Distance between Two Skew Lines : %f\n",sd);
@@ -150,8 +163,8 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[],int b2[])
     printf("Distance between point and plane : %f\n",pt);
 
     // OR_PLANE
-    float or = or_plane(b1);
-    printf("Distance between origin and plane : %f\n",or);
+    float o = or_plane(b1);
+    printf("Distance between origin and plane : %f\n",o);
 
     // PL PLANES
     float pl = pl_planes(b2,b1);
@@ -160,6 +173,7 @@ void dist_tester(int a1[], int a2[], int a3[], int a4[],int b1[],int b2[])
     //DISTANCE
     float di = distance(a1,a2);
     printf("Distance between two vectors: %f\n",di);
+
 }
 
 void prod_tester(int a1[], int a2[], int a3[], int a4[])
@@ -205,7 +219,7 @@ void section_tester(int a1[],int a2[],int u,int v)
     }
     printf("\n");
 
-     //external
+    //external
     float *exter;
     exter = external(a1,a2,u,v);
     printf("Vector Section (External) : ");
