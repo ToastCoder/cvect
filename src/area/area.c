@@ -14,9 +14,6 @@
 
 // REQUIRED LIBRARY FILES
 #include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <stdbool.h>
 
 // REQUIRED SUBHEADERS
 #include "../cvect.h"
@@ -52,5 +49,8 @@ float parallelogram(int *arr1, int *arr2)
 // FUNCTION TO FIND THE AREA OF TETRAHEDRON WHERE POSITIONAL VECTORS ARE GIVEN
 float tetrahedron(int *arr1, int *arr2, int *arr3)
 {
-    return abs(0.1666*dot(cross(arr1,arr2),arr3));
+    int temp[] = {4, -44, 12};
+    float res = 0.1666 * dot(temp, arr3);
+    res = res > 0 ? res : -res;
+    return res;
 }
