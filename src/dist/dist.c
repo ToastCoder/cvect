@@ -35,8 +35,9 @@ float sk_line(int *a1, int *a2, int *u, int *v)
 {
     int arr[3];
     for (int i = 0; i<3; i++) arr[i] = a2[i] - a1[i];
-    int x = arr[0]*(u[1]*v[2] - (u[2]*v[1])) - (arr[1]*(u[0]*v[2] - (u[2]*v[0]))) + (arr[2]*(u[0]*v[1] - (u[1]*v[0])));
-    return (float)abs(x/modVector(cross(u,v)));
+    float x = arr[0]*(u[1]*v[2] - (u[2]*v[1])) - (arr[1]*(u[0]*v[2] - (u[2]*v[0]))) + (arr[2]*(u[0]*v[1] - (u[1]*v[0])));
+    float res = x/modVector(cross(u,v)) > 0 ? x/modVector(cross(u,v)) : -(x/modVector(cross(u,v)));
+    return res;
 }
 
 // FUNCTION TO FIND THE DISTANCE BETWEEN A POINT AND A PLANE
