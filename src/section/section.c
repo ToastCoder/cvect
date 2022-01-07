@@ -27,7 +27,7 @@ float *internal(int *p1, int *p2, int m, int n)
     static float arr[3];
     for(int i=0;i<3;i++)
     {
-        arr[i] = ((m*p1[i])-(n*p2[i]))/(m-n);
+        arr[i] = ((m*p1[i])-(n*p2[i]))/(float)(m-n);
     }
     return arr;
 }
@@ -38,7 +38,7 @@ float *external(int *p1, int *p2, int m, int n)
     static float arr[3];
     for(int i=0;i<3;i++)
     {
-        arr[i] = ((m*p1[i])+(n*p2[i]))/(m+n);
+        arr[i] = ((m*p1[i])+(n*p2[i]))/(float)(m+n);
     }
     return arr;
 }
